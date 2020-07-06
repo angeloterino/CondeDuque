@@ -226,16 +226,19 @@ hr {
   margin: 40px 0;
 }
 
-.site-header ul.social-icons {
+.site-header ul.social-icons,
+.site-footer ul.social-icons {
   position: relative;
   z-index: 11;
   margin: 30px 0;
 }
-.site-header ul.social-icons li {
+.site-header ul.social-icons li,
+.site-footer ul.social-icons li {
   display: inline-block;
   margin: 0 2px;
 }
-.site-header ul.social-icons li a {
+.site-header ul.social-icons li a,
+.site-footer ul.social-icons li a  {
   width: 36px;
   height: 36px;
   background-color: #010101;
@@ -595,8 +598,7 @@ hr {
   width: 100%;
 }
 .portfolio-item .portfolio-thumb .portfolio-overlay {
-  background-color: #ec523f;
-  /* position: absolute; */
+  position: relative;
   width: 100%;
   height: 100%;
   /* top: 0; */
@@ -612,8 +614,57 @@ hr {
   min-height: 280px;
   /* height: 200px; */
 }
-.portfolio-item .portfolio-thumb .portfolio-overlay.fucsia{
+.portfolio-item.fuchsia .portfolio-thumb .portfolio-overlay{
   background-color:#F7D8EA;
+}
+.portfolio-item.red .portfolio-thumb .portfolio-overlay{
+  background-color:#ec523f;
+}
+.portfolio-item.light-blue .portfolio-thumb .portfolio-overlay{
+  background-color:#D8F1F8;
+}
+.portfolio-item.light-pink .portfolio-thumb .portfolio-overlay{
+  background-color:#F5D8D4;
+}
+.portfolio-item.blueberry .portfolio-thumb .portfolio-overlay{
+  background-color:#E7CEEE;
+}
+.portfolio-item.light-gray .portfolio-thumb .portfolio-overlay{
+  background-color:#EFEBE8;
+}
+.portfolio-item.light-orange .portfolio-thumb .portfolio-overlay{
+  background-color:#FEEEDE;
+}
+.portfolio-item.light-acuamarine .portfolio-thumb .portfolio-overlay{
+  background-color:#D1EFE7;
+}
+.portfolio-item .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color:#FFFFFF;
+  background-color:#010101;
+}
+.portfolio-item.fuchsia .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color:#F7D8EA !important;
+}
+.portfolio-item.red .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color:#ec523f !important;
+}
+.portfolio-item.blueberry .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color:#E7CEEE !important;
+}
+.portfolio-item.light-blue .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color:#D8F1F8 !important;
+}
+.portfolio-item.light-pink .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color:#F5D8D4 !important;
+}
+.portfolio-item.light-acuamarine .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color:#D1EFE7 !important;
+}
+.portfolio-item.light-gray .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color:#EFEBE8 !important;
+}
+.portfolio-item.light-orange .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color:#FEEEDE !important;
 }
 .portfolio-item .portfolio-thumb .portfolio-overlay h3 {
   font-size: 23px;
@@ -791,7 +842,7 @@ hr {
 }
 
 #footer {
-  margin-top: 130px;
+  /* margin-top: 130px; */
 }
 
 /*
@@ -832,7 +883,7 @@ div.button-wrapper{
   float: right;
   padding-top: 0px;
 }
-.top-bar{
+.site-header .top-bar{
   background-color: black;
   color: white;
   padding: .5em;
@@ -863,9 +914,9 @@ div.button-wrapper{
 }
 .navbar-nav.navbar-right{
   
-margin-right: 5px !important;
-  
-font-size: 14px;
+  margin-right: 5px !important;
+
+  font-size: 14px;
 }
 .logo .logo-header{
   text-transform: uppercase;
@@ -883,3 +934,66 @@ font-size: 14px;
     content: none;
     padding-right: 0;
 }
+.low-bar { 
+    color: white;
+    background-color: #010101;
+    font-size:12px;
+}
+.low-bar a {
+    color: white;
+    font-size: 10px;
+    text-decoration: underline;
+    margin-left: 8px;
+}
+ul.navbar-nav{
+  padding-left: 10px;
+  padding-right: 10px;
+} 
+.low-bar .nav-bar
+{
+  margin-top:0px;
+  font-size: 10px;
+}
+.low-bar p
+{
+  margin: 10px;
+}
+.site-footer ul.social-icons
+{
+  margin-bottom:10px;
+}
+.site-footer .top-bar
+{
+  margin-top:40px;
+}
+ ul.social-icons a{
+   font-size:20px;
+ }
+ .site-footer .navbar-nav.navbar-right
+ {
+    font-size: 12px;
+    margin-right: 0px !important;
+    padding-right: 5px;
+ }
+ .site-footer .top-bar
+ {
+   margin-bottom: 40px;
+ }
+ .site-footer .top-bar .left
+ {
+   margin-top: 40px;
+ }
+ .portfolio-item .portfolio-thumb .portfolio-overlay::before {
+   position: absolute;
+   top: -42px;
+   left: -5px;
+   padding: 5px;
+   background: white;
+   font-size: 12px;
+ }
+ .portfolio-item.cancelado .portfolio-thumb .portfolio-overlay::before {
+     content:"CANCELADO"
+ }
+ .portfolio-item.ultimas .portfolio-thumb .portfolio-overlay::before {
+   content: "ÚLTIMAS ENTRADAS";
+ }
