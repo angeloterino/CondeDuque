@@ -615,7 +615,7 @@ hr {
   /* height: 200px; */
 }
 .portfolio-item.escenicas .portfolio-thumb .portfolio-overlay{
-  background-color: rgba(249, 226, 240, .45);9, 226, 240, .45);9, 226, 240, .45);9, 226, 240, .4);9, 226, 240, 1);, 226, 240);
+  background-color: rgba(249, 226, 240, .45);
 }
 .portfolio-item.red .portfolio-thumb .portfolio-overlay{
   background-color:#ec523f;
@@ -995,5 +995,5 @@ ul.navbar-nav{
      content:"CANCELADO"
  }
  .portfolio-item.ultimas .portfolio-thumb .portfolio-overlay::before {
-   content: "ÃšLTIMAS ENTRADAS";
+   content: "\00daLTIMAS ENTRADAS";
  }
