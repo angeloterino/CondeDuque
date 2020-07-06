@@ -614,56 +614,56 @@ hr {
   min-height: 280px;
   /* height: 200px; */
 }
-.portfolio-item.fuchsia .portfolio-thumb .portfolio-overlay{
-  background-color:#F7D8EA;
+.portfolio-item.escenicas .portfolio-thumb .portfolio-overlay{
+  background-color: rgba(249, 226, 240, .45);9, 226, 240, .45);9, 226, 240, .45);9, 226, 240, .4);9, 226, 240, 1);, 226, 240);
 }
 .portfolio-item.red .portfolio-thumb .portfolio-overlay{
   background-color:#ec523f;
 }
-.portfolio-item.light-blue .portfolio-thumb .portfolio-overlay{
-  background-color:#D8F1F8;
+.portfolio-item.cine .portfolio-thumb .portfolio-overlay{
+  background-color: rgba(216, 241, 247, .45);
 }
-.portfolio-item.light-pink .portfolio-thumb .portfolio-overlay{
-  background-color:#F5D8D4;
+.portfolio-item.pensamiento .portfolio-thumb .portfolio-overlay{
+  background-color: rgba(246, 189, 156, .5);
 }
-.portfolio-item.blueberry .portfolio-thumb .portfolio-overlay{
-  background-color:#E7CEEE;
+.portfolio-item.poesia .portfolio-thumb .portfolio-overlay{
+  background-color:rgba(231, 206, 238, .7);
 }
-.portfolio-item.light-gray .portfolio-thumb .portfolio-overlay{
-  background-color:#EFEBE8;
+.portfolio-item.plasticas .portfolio-thumb .portfolio-overlay{
+  background-color: rgba(239, 235, 232, .45);
 }
-.portfolio-item.light-orange .portfolio-thumb .portfolio-overlay{
-  background-color:#FEEEDE;
+.portfolio-item.meditacion .portfolio-thumb .portfolio-overlay{
+  background-color:rgba(254, 238, 222, .7);
 }
-.portfolio-item.light-acuamarine .portfolio-thumb .portfolio-overlay{
-  background-color:#D1EFE7;
+.portfolio-item.musica .portfolio-thumb .portfolio-overlay{
+  background-color: rgba(210, 239, 230, .35);
 }
 .portfolio-item .portfolio-thumb .portfolio-overlay a.expand.negative {
   color:#FFFFFF;
   background-color:#010101;
 }
-.portfolio-item.fuchsia .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color:#F7D8EA !important;
+.portfolio-item.escenicas .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color: #f9e2f0 !important;
 }
 .portfolio-item.red .portfolio-thumb .portfolio-overlay a.expand.negative {
   color:#ec523f !important;
 }
-.portfolio-item.blueberry .portfolio-thumb .portfolio-overlay a.expand.negative {
+.portfolio-item.poesia .portfolio-thumb .portfolio-overlay a.expand.negative {
   color:#E7CEEE !important;
 }
-.portfolio-item.light-blue .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color:#D8F1F8 !important;
+.portfolio-item.cine .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color: #D8F1F7 !important;
 }
-.portfolio-item.light-pink .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color:#F5D8D4 !important;
+.portfolio-item.pensamiento .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color: #F6BD9C !important;
 }
-.portfolio-item.light-acuamarine .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color:#D1EFE7 !important;
+.portfolio-item.musica .portfolio-thumb .portfolio-overlay a.expand.negative {
+  color: #D2EFE6 !important;
 }
-.portfolio-item.light-gray .portfolio-thumb .portfolio-overlay a.expand.negative {
+.portfolio-item.plasticas .portfolio-thumb .portfolio-overlay a.expand.negative {
   color:#EFEBE8 !important;
 }
-.portfolio-item.light-orange .portfolio-thumb .portfolio-overlay a.expand.negative {
+.portfolio-item.meditacion .portfolio-thumb .portfolio-overlay a.expand.negative {
   color:#FEEEDE !important;
 }
 .portfolio-item .portfolio-thumb .portfolio-overlay h3 {
@@ -995,5 +995,5 @@ ul.navbar-nav{
      content:"CANCELADO"
  }
  .portfolio-item.ultimas .portfolio-thumb .portfolio-overlay::before {
-   content: "ÚLTIMAS ENTRADAS";
+   content: "ÃšLTIMAS ENTRADAS";
  }
