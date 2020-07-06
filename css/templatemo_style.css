@@ -1008,3 +1008,6 @@ ul.navbar-nav{
    width: 22.9%;
    display: inline-block;
  }
+ .bar-wrapper {
+		background-color: #010101;
+ }
