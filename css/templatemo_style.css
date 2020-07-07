@@ -501,7 +501,7 @@ hr {
   /* border-bottom: 1px solid #444444; */
   display: inline-block;
 }
-.heading-section p {
+.heading-section h3 {
   color: #010101;
   font-size: 20px;
   font-weight: 300;
@@ -895,7 +895,7 @@ div.button-wrapper{
   color: white;
   padding: .5em;
   font-size: 10px;
-  font-family: "Inter";
+  font-family: lato,sans-serif;
 }
 .top-bar .text{
   margin-top: .5em;
@@ -941,10 +941,11 @@ div.button-wrapper{
     content: none;
     padding-right: 0;
 }
-.low-bar { 
+.low-bar {
     color: white;
     background-color: #010101;
     font-size:12px;
+    font-family: lato,sans-serif;
 }
 .low-bar a {
     color: white !important;
@@ -1102,4 +1103,13 @@ a:visited {
 }
 .dropdown-menu{
   transition: all 200ms ease-in-out;
+}
+.portfolio-item.white .portfolio-thumb .portfolio-overlay {
+    border: 2px solid #B2B2B2;
+    border-top: 0;
+}
+.portfolio-item .portfolio-thumb .top-text {
+    position: absolute;
+    top: -40px;
+    left: 0px;
 }
