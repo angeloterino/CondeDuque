@@ -275,7 +275,7 @@ hr {
 
 #menu-wrapper {
   background-color: white;
-  overflow: hidden;
+  /* overflow: hidden; */
   -moz-box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.07);
   /* -webkit-box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.07); */
   /* box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.07); */
@@ -595,10 +595,11 @@ hr {
 
 .portfolio-item {
   margin-bottom: 30px;
+  position: relative;
 }
 .portfolio-item .portfolio-thumb {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .portfolio-item .portfolio-thumb img {
   width: 100%;
@@ -1013,7 +1014,7 @@ ul.navbar-nav{
    line-height: 30px;
    border-bottom: 1px solid #010101;
  }
- .menu .menu-row> a {
+ .menu .menu-row a {
    display: inline-block;
    margin: 0 auto;
    float: left;
@@ -1077,4 +1078,28 @@ ul.navbar-nav{
 }
 a:visited {
   color: #010101;
+}
+
+.main-menu .menu .menu-row .dropdown.show.open a {
+    background-color: #010101;
+    color: white;
+}
+.main-menu .menu .menu-row .dropdown.show.open a.dropdown-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-weight: 100;
+    line-height: 34px;
+}
+
+.open>.dropdown-menu {
+    background-color: #010101;
+    border: 0;
+    border-radius: 0;
+    top: 28px;
+    max-width: 30%;
+    padding: 16px;
+}
+.dropdown-menu{
+  transition: all 200ms ease-in-out;
 }
