@@ -230,12 +230,15 @@ hr {
 .site-footer ul.social-icons {
   position: relative;
   z-index: 11;
-  margin: 30px 0;
+  margin: 30px auto;
 }
 .site-header ul.social-icons li,
 .site-footer ul.social-icons li {
   display: inline-block;
-  margin: 0 2px;
+  margin: 0 6px;
+}
+.site-header ul.social-icons li{
+  margin:0;
 }
 .site-header ul.social-icons li a,
 .site-footer ul.social-icons li a  {
@@ -943,7 +946,7 @@ div.button-wrapper{
     font-size:12px;
 }
 .low-bar a {
-    color: white;
+    color: white !important;
     font-size: 10px;
     text-decoration: underline;
     margin-left: 8px;
@@ -969,8 +972,14 @@ ul.navbar-nav{
 {
   margin-top:40px;
 }
- ul.social-icons a{
+ ul.social-icons li a{
    font-size:20px;
+ }
+ .site-header ul.social-icons li a{
+   font-size: 15px;
+   line-height: 26px !important;
+   width: 24px !important;
+   height: 24px !important;
  }
  .site-footer .navbar-nav.navbar-right
  {
@@ -1005,9 +1014,67 @@ ul.navbar-nav{
    border-bottom: 1px solid #010101;
  }
  .menu .menu-row> a {
-   width: 22.9%;
    display: inline-block;
+   margin: 0 auto;
+   float: left;
+   border: 0;
  }
  .bar-wrapper {
 		background-color: #010101;
  }
+ .form-inline.search input {
+   border: 0;
+   box-shadow: none;
+ }
+ .form-inline.search i.fa {
+    margin-left: -20px;
+    font-size: 18px;
+ }
+ .top-social a {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 12px;
+ }
+ .top-social ul.social-icons {
+
+    display: inline-block;
+    margin-top: 15px;
+    padding-left: 0px;
+
+ }
+ .top-social .form-inline{
+    display: inline-block;
+    margin-right: 16px;
+ }
+.form-inline.search:focus-within input {
+    border:1px solid #010101;
+    transition: border ease-in-out .15s;  
+}
+.form-inline.search:focus-within i.fa{
+    opacity: .0;
+    transition: opacity ease-in-out .15s; 
+}
+.menu a:hover{
+  color:white;
+  background-color:#010101;
+}
+.main-menu .menu .menu-row {
+    padding: 0px;
+    position: relative;
+    width: 100%;
+}
+.main-menu .menu .menu-row.five a{
+  width: 20%
+}
+.main-menu .menu .menu-row.four a{
+  width: 25%
+}
+.main-menu .menu .menu-row a.text-left{
+  padding-left:15px;
+}
+.main-menu .menu .menu-row a.text-right{
+  padding-right:15px;
+}
+a:visited {
+  color: #010101;
+}
