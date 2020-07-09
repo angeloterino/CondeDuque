@@ -242,14 +242,14 @@ hr {
 }
 .site-header ul.social-icons li a,
 .site-footer ul.social-icons li a  {
-  width: 36px;
-  height: 36px;
-  background-color: #010101;
-  color: white;
+  /* width: 36px; */
+  /* height: 36px; */
+  /* background-color: #010101; */
+  /* color: white; */
   text-align: center;
   line-height: 36px;
-  border-radius: 18px;
-  -webkit-border-radius: 18px;
+  /* border-radius: 18px; */
+  /* -webkit-border-radius: 18px; */
   -moz-border-radius: 18px;
 }
 
@@ -592,6 +592,7 @@ hr {
 .portfolio-item,
 .sheet-item {
   position: relative;
+  height: 100%;
 }
 .portfolio-item{
   margin-bottom: 30px;
@@ -681,6 +682,9 @@ hr {
   text-transform: uppercase;
   margin-top: 5px;
   display: inline-block;
+}
+.sheet-item .sheet-thumb .sheet-overlay h3{
+  font-size:25px;
 }
 .portfolio-item .portfolio-thumb .portfolio-overlay a.expand,
 .sheet-item .sheet-thumb .sheet-overlay a.expand {
@@ -982,6 +986,12 @@ ul.navbar-nav{
    line-height: 26px !important;
    width: 24px !important;
    height: 24px !important;
+   background-size: 24px 24px;
+ }
+ .site-header ul.social-icons li a:before{
+   width: 24px !important;
+   height: 24px !important;
+   background-size: 24px 24px;
  }
  .site-footer .navbar-nav.navbar-right
  {
@@ -998,7 +1008,8 @@ ul.navbar-nav{
    margin-top: 40px;
  }
  .portfolio-item .portfolio-thumb .portfolio-overlay::before,
- .sheet-item .sheet-thumb .sheet-overlay:before {
+ .sheet-item .sheet-thumb .sheet-overlay:before,
+ .sheet-item.ultimas .nav-wrapper:before{
    position: absolute;
    top: -42px;
    left: -5px;
@@ -1011,7 +1022,8 @@ ul.navbar-nav{
      content:"CANCELADO"
  }
  .portfolio-item.ultimas .portfolio-thumb .portfolio-overlay::before,
- .sheet-item.ultimas .sheet-thumb .sheet-overlay:before {
+ .sheet-item.ultimas .sheet-thumb .sheet-overlay:before,
+ .sheet-item.ultimas .nav-wrapper:before {
    content: "\00daLTIMAS ENTRADAS";
  }
  .menu .menu-row {
@@ -1045,11 +1057,13 @@ ul.navbar-nav{
  }
  .top-social ul.social-icons {
 
-    display: inline-block;
-    margin-top: 15px;
-    padding-left: 0px;
+display: inline-block;
 
- }
+margin-top: 15px;
+
+padding-left: 0px;
+
+}
  .top-social .form-inline{
     display: inline-block;
     margin-right: 16px;
@@ -1165,4 +1179,122 @@ div#sheet {
 }
 img.logo{
   width: auto !important;
+}
+.row.body-content, .row.footer-content,
+.row.body-content .right-column .section.accesibilidad {
+    font-size: 12px;
+}
+.row.body-content .right-column {
+    font-size: 14px;
+}
+.row.body-content .right-column, .row.footer-content .right-column,
+.row.body-content b {
+    font-family: Inter, Arial, sans-serif;
+}
+.row.body-content b  {
+    text-transform: uppercase;
+}
+.row.body-content p,
+.row.footer-content p {
+    margin-bottom: .8em;
+}
+.row.footer-content .tematica> p{
+    margin-bottom: 2em;
+    font-size: 12px;
+}
+.row.body-content .right-column p,
+.row.footer-content .right-column p {
+    margin-bottom: 2px;
+}
+.row.body-content .right-column p.top-label {
+    font-weight: 600;
+}
+
+.row.body-content .right-column .section {
+    margin-bottom: 26px;
+}
+.row.body-content .right-column .section.accesibilidad img,
+.row.footer-content .right-column .section.accesibilidad img{
+  display:inline;
+  vertical-align: sub;
+}
+.twitter-hashtag a {
+    display: block;
+    font-size: 12px;
+}
+.twitter-hashtag p,
+.twitter-hashtag a {
+    margin-bottom: 12px !important;
+}
+.row.body-content .right-column img,
+.row.footer-content .right-column img{
+    width: auto;
+    margin-top: 12px;
+}
+.row.body-content .right-column .section.accesibilidad div>div,
+.row.footer-content .right-column .section.accesibilidad div>div{
+    display:inline-block;
+}
+.row.body-content .right-column .section.accesibilidad div.image-wrapper>img,
+.row.footer-content .right-column .section.accesibilidad div.image-wrapper>img{
+    height: 1.65em;
+}
+.row.body-content .right-column .section.accesibilidad div.image-wrapper,
+.row.footer-content .right-column .section.accesibilidad div.image-wrapper{
+    min-width: 2.7em;
+}
+.row.body-content .right-column div.accesibilidad> p:last-child,
+.row.footer-content .right-column div.accesibilidad> p:last-child {
+    margin-top: 12px;
+}
+a.jobo img {
+    width: 50% !important;
+}
+a.jobo {
+    width: 50%;
+    display: block;
+}
+.row.footer-content .tematica {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 80px;
+    /* margin-bottom: 80px; */
+}
+.row.footer-content .logo.inaem {
+    margin-top: 80px;
+    display: block;
+}
+.row.footer-content .logo.inaem > img{
+    margin: 0;
+}
+.col-lg-3.right-column h2 {
+    font-size: 20px;
+}
+ul.social-icons a.icono:before {
+    content: " ";
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+}
+
+ul.social-icons a.icono.icono-facebook:before {
+    background-image: url('../images/icons/icono-facebook-retina.png');
+}
+ul.social-icons a.icono.icono-instagram:before {
+    background-image: url('../images/icons/icono-instagram-retina.png');
+}
+ul.social-icons a.icono.icono-twitter:before {
+    background-image: url('../images/icons/icono-twitter-retina.png');
+}
+ul.social-icons a.icono.icono-youtube:before {
+    background-image: url('../images/icons/icono-youtube-retina.png');
+}
+.top-social > a{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
