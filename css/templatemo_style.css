@@ -484,7 +484,7 @@ hr {
 
 .content-section {
   margin-top: 0;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .heading-section {
@@ -606,8 +606,7 @@ hr {
   width: 100%;
   margin-top: 12px;
 }
-.portfolio-item .portfolio-thumb .portfolio-overlay,
-.sheet-item .sheet-thumb .sheet-overlay  {
+.portfolio-item .portfolio-thumb .portfolio-overlay, .sheet-item .sheet-thumb .sheet-overlay, .blog-item  {
   position: relative;
   width: 100%;
   height: 100%;
@@ -621,7 +620,7 @@ hr {
 }
 .portfolio-item .portfolio-thumb .portfolio-overlay
 {
-   min-height: 280px;
+   min-height: 264px;
 }
 .portfolio-item.escenicas .portfolio-thumb .portfolio-overlay{
   background-color: rgba(249, 226, 240, .45);
@@ -652,56 +651,61 @@ hr {
   color:#FFFFFF;
   background-color:#010101;
 }
-.portfolio-item.escenicas .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color: #f9e2f0 !important;
+.portfolio-item.escenicas .portfolio-thumb .portfolio-overlay a.expand.negative,
+.portfolio-item.escenicas .portfolio-thumb .portfolio-overlay a.expand:hover {
+  color: #f9e2f0;
 }
-.portfolio-item.red .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color:#ec523f !important;
+.portfolio-item.red .portfolio-thumb .portfolio-overlay a.expand.negative,
+.portfolio-item.red .portfolio-thumb .portfolio-overlay a.expand:hover {
+  color:#ec523f;
 }
-.portfolio-item.poesia .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color:#E7CEEE !important;
+.portfolio-item.poesia .portfolio-thumb .portfolio-overlay a.expand.negative,
+.portfolio-item.poesia .portfolio-thumb .portfolio-overlay a.expand:hover  {
+  color:#E7CEEE;
 }
-.portfolio-item.cine .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color: #D8F1F7 !important;
+.portfolio-item.cine .portfolio-thumb .portfolio-overlay a.expand.negative,
+.portfolio-item.cine .portfolio-thumb .portfolio-overlay a.expand:hover {
+  color: #D8F1F7;
 }
-.portfolio-item.pensamiento .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color: #F6BD9C !important;
+.portfolio-item.pensamiento .portfolio-thumb .portfolio-overlay a.expand.negative,
+.portfolio-item.pensamiento .portfolio-thumb .portfolio-overlay a.expand:hover {
+  color: #F6BD9C;
 }
-.portfolio-item.musica .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color: #D2EFE6 !important;
+.portfolio-item.musica .portfolio-thumb .portfolio-overlay a.expand.negative,
+.portfolio-item.musica .portfolio-thumb .portfolio-overlay a.expand:hover {
+  color: #D2EFE6;
 }
-.portfolio-item.plasticas .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color:#EFEBE8 !important;
+.portfolio-item.plasticas .portfolio-thumb .portfolio-overlay a.expand.negative,
+.portfolio-item.plasticas .portfolio-thumb .portfolio-overlay a.expand:hover {
+  color:#EFEBE8;
 }
-.portfolio-item.meditacion .portfolio-thumb .portfolio-overlay a.expand.negative {
-  color:#FEEEDE !important;
+.portfolio-item.meditacion .portfolio-thumb .portfolio-overlay a.expand.negative,
+.portfolio-item.meditacion .portfolio-thumb .portfolio-overlay a.expand:hover {
+  color:#FEEEDE;
 }
-.portfolio-item .portfolio-thumb .portfolio-overlay h3,
-.sheet-item .sheet-thumb .sheet-overlay h3 {
-  font-size: 23px;
+.portfolio-item .portfolio-thumb .portfolio-overlay h3, .sheet-item .sheet-thumb .sheet-overlay h3, .blog-item h3 {
+  font-size: 22px;
   text-transform: uppercase;
-  margin-top: 5px;
+  margin-top: 1px;
   display: inline-block;
+  line-height: 27px;
 }
 .sheet-item .sheet-thumb .sheet-overlay h3{
   font-size:25px;
 }
 .portfolio-item .portfolio-thumb .portfolio-overlay a.expand,
 .sheet-item .sheet-thumb .sheet-overlay a.expand {
-  margin-right: 12px;
+  margin-right: 5px;
   position: relative;
   margin-bottom: 12px;
   font-size: 10px;
   border: 1px solid #010101;
   -moz-border-radius: 18px;
-  padding: 9px;
-  padding-top: 7px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 8px 12px 9px 7px;
   text-transform: uppercase;
-  color: #010101;
   display: inline-block;
   text-align: center;
+  font-family: Inter, Arial, sans-serif;
 }
 .portfolio-item .portfolio-thumb .portfolio-overlay a.expand i,
 .sheet-item .sheet-thumb .sheet-overlay a.expand i {
@@ -865,7 +869,7 @@ body, p, div, h1, h2, h3, h4, h5, h6 {
 
 .small-caps{
   text-transform: uppercase;
-  font-size: .7em
+  font-size: 10px !important;
 }
 span.date{
     margin-bottom: 10px;
@@ -874,6 +878,7 @@ span.date{
 }
 p.subtitle{
     margin-bottom: 10px;
+    line-height: 18px;
     font-style: italic;
 }
 .portfolio-overlay div.button-wrapper{
@@ -921,13 +926,12 @@ p.subtitle{
 .row.nav-bar {
     margin-top: 15px;
     font-size: 12px;
-
 }
 .navbar-nav.navbar-right{
   
-  margin-right: 5px !important;
-
-  font-size: 14px;
+margin-right: 5px !important;
+  
+font-size: 13px;
 }
 .logo .logo-header{
   text-transform: uppercase;
@@ -1009,11 +1013,12 @@ ul.navbar-nav{
  }
  .portfolio-item .portfolio-thumb .portfolio-overlay::before,
  .sheet-item .sheet-thumb .sheet-overlay:before,
- .sheet-item.ultimas .nav-wrapper:before{
+ .sheet-item.ultimas .nav-wrapper:before,
+ .ribbon {
    position: absolute;
-   top: -42px;
-   left: -5px;
-   padding: 5px;
+   top: -4em;
+   left: 0px;
+   padding: 7px;
    background: white;
    font-size: 12px;
  }
@@ -1027,7 +1032,7 @@ ul.navbar-nav{
    content: "\00daLTIMAS ENTRADAS";
  }
  .menu .menu-row {
-   line-height: 30px;
+   line-height: 35px;
    border-bottom: 1px solid #010101;
  }
  .menu .menu-row a {
@@ -1035,6 +1040,7 @@ ul.navbar-nav{
    margin: 0 auto;
    float: left;
    border: 0;
+   padding-top: .2em;
  }
  .bar-wrapper {
 		background-color: #010101;
@@ -1297,4 +1303,58 @@ ul.social-icons a.icono.icono-youtube:before {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+a.expand {
+  background-color: transparent;
+  color: #010101;
+}
+a.expand.negative {
+  background-color: #010101;
+}
+a.expand.negative:hover {
+  background-color: transparent !important;
+  color: #010101 !important;
+}
+a.expand:hover {
+  background-color: #010101;
+  color:white;
+}
+.row.nav-bar div > ul, .main-header .container {
+    padding: 0;
+}
+#sheet.content-section div.left-column
+{
+    padding-left: 0;
+}
+#sheet.content-section div.right-column
+{
+    padding-right: 0;
+}
+.blog-item h3 {
+  font-size: 25px;
+  margin-top: 2px;
+  line-height: 34px;
+}
+.portfolio-item.escenicas .portfolio-thumb .portfolio-overlay p {
+    font-size: 16px;
+}
+
+p.fecha {
+    font-size: 13px !important;
+    font-family: Inter, Arial, sans-serif;
+    margin-bottom: 1em;
+}
+#banner .col-lg-6.image {
+    padding-right: 0;
+}
+
+.blog-item {
+    padding-top: 16px;
+}
+
+.blog-item p.content {
+    margin: 28px 0;
+    font-family: Inter,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 14px;
 }
