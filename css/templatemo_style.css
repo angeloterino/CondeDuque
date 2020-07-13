@@ -1640,18 +1640,13 @@ p.quote:after, p.quote:before {content: "\"";}
     font-size: 24px;
 }
 
+/*PAGINA BASICA*/
+#pagina-basica .heading-section.text-center {
+    padding: 40px;
+    background-color: #E6E6E6;
+    margin-bottom: 0;
+}
 
-/*fountain*/
-.fountain {
-    position: absolute;
-    top: 122px;
-    left: 345px;
-    width: 302px;
-    height: 1423px;
-    /* background-color: #12121255; */
-    z-index: 10000;
-    display: block;
-    background-image: url('../../Conde Duque/2020-06-25/homefichaescenicasblog/HOME_FICHA_ESCENICAS_BLOG/05 ARTISTAS RESIDENTES/05-ARTISTAS-RESIDENTES_seccion.jpg');
-    background-position: -22px -106px;
-    background-size: 410%;
+#pagina-basica {
+    margin-bottom: 80px;
 }
