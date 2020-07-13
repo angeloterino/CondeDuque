@@ -324,7 +324,7 @@ hr {
   text-align: center;
   line-height: 36px;
   font-size: 14px;
-  background: #EC523F;
+  background: transparent;
   display: inline-block;
   color: white;
   cursor:pointer;
@@ -424,8 +424,9 @@ hr {
     padding-left: 70px;
   }
   .toggle-menu {
-    margin-top: 7px;
+    margin-top: 5px;
     margin-right: 10px;
+    position: absolute;
   }
   .main-menu ul li {
     display: block;
@@ -456,13 +457,104 @@ hr {
     border-top: none;
   }
   .main-menu ul li:last-child { margin-right: 20px; }
+  ul.social-icons a.icono {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .site-footer ul.social-icons
+  {
+    width: 100%;
+    margin: 0 auto !important;
+    text-align: center;
+  }
+  .site-footer .navbar-nav.navbar-right
+  {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .site-footer ul.navbar-nav.navbar-right > li
+  {
+    display: inline-block;
+  }
+  .site-footer ul.social-icons li a,
+  .site-footer ul.social-icons li a:before
+  {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  .site-footer .navbar-nav.navbar-right li
+  {
+    margin: .3rem;
+  }
+  .site-footer ul.navbar-nav.navbar-right li:last-child:before
+  {
+    content: "";
+  }
+  .site-footer ul.navbar-nav.navbar-right li:last-child
+  {
+    display: list-item; 
+  }
+  .site-footer ul.social-icons li {
+    margin: 0 1rem;
+  }
+  ul.social-icons {
+    margin:0 !important;
+    margin-top: 5px !important;
+    /* float: right; */
+  }
+  div.top-social{
+    border-top: 1px solid #010101;
+    border-bottom: 1px solid #010101;
+    padding-top: .5rem;
+    padding-bottom: 0.5rem;
+  }
+  .form-inline.search{
+    padding-left: 1rem;
+    position: relative;
+    margin-left: 16px;
+    margin-right: 0 !important;
+    padding-right: 0;
+    margin-top: 5px;
+    float:left;
+    width:50% !important;
+  }
+  i.fa.fa-search.fa-2x{
+    font-weight: lighter;
+    vertical-align: super;
+    right: 0;
+    font-size: 2em !important;
+    top: auto !important;
+  }
+  .form-inline.search input.form-control
+  {
+    float: left;
+    background: transparent;
+    z-index: 1000;
+  }
+  .main-header, .site-header{
+    margin-top: 0;
+  }
+  .site-footer .visible-xs p.left
+  {
+    margin-bottom: 1.3em;
+  }
+  .site-footer .visible-xs img
+  {
+    margin: 0 auto;
+  }
+  .bar-wrapper .row.low-bar .col-xs-12.col-md-12
+  {
+    text-align:center;
+  }
 }
 @media screen and (max-width: 767px) {
-  .main-header {
+  .main-header, .site-header {
     top: 0;
   }
   .site-header {
-    margin-top: 40px;
+    margin-top: 0;
   }
   .logo-wrapper {
     float: left;
@@ -473,12 +565,24 @@ hr {
   .flexslider {
     margin-top: 80px;
   }
+  .top-bar .icon{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center !important;
+  }
+  .site-footer .top-bar {
+    margin-top: .5rem !important;
+  }
 }
 
 @media screen and (max-height: 500px) {
   .menu-first.show {
     max-height: 250px;
     padding-right: 15px;
+  }
+  ul.social-icons a.icono {
+    width: 32px !important;
+    height: 32px !important;
   }
 }
 
@@ -916,7 +1020,7 @@ p.subtitle{
 }
 .top-bar .icon img{
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: text-top;
 }
 .navbar-nav>li {
   text-transform: uppercase;
@@ -991,15 +1095,15 @@ ul.navbar-nav{
  }
  .site-header ul.social-icons li a{
    font-size: 15px;
-   line-height: 26px !important;
-   width: 24px !important;
-   height: 24px !important;
+   line-height: 29px !important;
+   width: 24px;
+   height: 24px;
    background-size: 24px 24px;
  }
  .site-header ul.social-icons li a:before{
-   width: 24px !important;
-   height: 24px !important;
-   background-size: 24px 24px;
+   width: 100% !important;
+   height: 100% !important;
+   background-size: 100% 100%;
  }
  .site-footer .navbar-nav.navbar-right
  {
@@ -1052,6 +1156,10 @@ ul.navbar-nav{
  .form-inline.search input {
    border: 0;
    box-shadow: none;
+ }
+ .form-inline.search input:focus {
+   border: 0;
+   border-bottom: 1px solid #010101;
  }
  .form-inline.search i.fa {
     margin-left: -20px;
@@ -1649,4 +1757,35 @@ p.quote:after, p.quote:before {content: "\"";}
 
 #pagina-basica {
     margin-bottom: 80px;
+}
+
+/*fountain*/
+.fountain {
+    position: absolute;
+    top: 122px;
+    left: 345px;
+    width: 302px;
+    height: 1423px;
+    /* background-color: #12121255; */
+    z-index: 10000;
+    display: block;
+    background-image: url('../../Conde Duque/2020-06-25/homefichaescenicasblog/HOME_FICHA_ESCENICAS_BLOG/08 PAGINA BASICA/08-PAGINA-BASICA.jpg');
+    background-position: -22px -106px;
+    background-size: 410%;
+}
+div.toggle-menu i.fa {
+    color: #010101;
+    font-size: 2.3em;
+    font-size: 2rem;
+}
+.site-header .container.visible-xs{
+  margin-top: 1.5rem;
+  margin-bottom :1.5rem
+}
+.site-header .container.visible-xs{
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.site-header .container.visible-xs .logo-header{
+  margin: .5rem
 }
