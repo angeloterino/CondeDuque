@@ -34,7 +34,7 @@ ul {
 
 blockquote,
 q {
-  quotes: none;
+  quotes: inherit;
 }
 
 blockquote:before,
@@ -499,7 +499,7 @@ hr {
 }
 .heading-section h3 {
   color: #010101;
-  font-size: 21px;
+  font-size: 25px;
   font-weight: 300;
   text-transform: uppercase;
   margin-top: 10px;
@@ -590,7 +590,8 @@ hr {
 }
 
 .portfolio-item,
-.sheet-item {
+.sheet-item,
+#blog-seccion .item {
   position: relative;
   height: 100%;
 }
@@ -598,15 +599,18 @@ hr {
   margin-bottom: 30px;
 }
 .portfolio-item .portfolio-thumb,
-.sheet-item-item .sheet-thumb {
+.sheet-item-item .sheet-thumb,
+#blog-seccion .item .thumb {
   position: relative;
 }
 .portfolio-item .portfolio-thumb img,
-.sheet-item .sheet-thumb img  {
+.sheet-item .sheet-thumb img,
+#blog-seccion .item .thumb img {
   width: 100%;
   margin-top: 12px;
 }
-.portfolio-item .portfolio-thumb .portfolio-overlay, .sheet-item .sheet-thumb .sheet-overlay, .blog-item  {
+.portfolio-item .portfolio-thumb .portfolio-overlay, .sheet-item .sheet-thumb .sheet-overlay, .blog-item,
+#blog-seccion .item .thumb .overlay  {
   position: relative;
   width: 100%;
   height: 100%;
@@ -683,7 +687,7 @@ hr {
 .portfolio-item.meditacion .portfolio-thumb .portfolio-overlay a.expand:hover {
   color:#FEEEDE;
 }
-.portfolio-item .portfolio-thumb .portfolio-overlay h3, .sheet-item .sheet-thumb .sheet-overlay h3, .blog-item h3 {
+#blog-seccion .item .thumb .overlay h3, .portfolio-item .portfolio-thumb .portfolio-overlay h3, .sheet-item .sheet-thumb .sheet-overlay h3, .blog-item h3 {
   font-size: 22px;
   text-transform: uppercase;
   margin-top: 1px;
@@ -693,8 +697,7 @@ hr {
 .sheet-item .sheet-thumb .sheet-overlay h3{
   font-size:25px;
 }
-.portfolio-item .portfolio-thumb .portfolio-overlay a.expand,
-.sheet-item .sheet-thumb .sheet-overlay a.expand {
+.portfolio-item .portfolio-thumb .portfolio-overlay a.expand, .sheet-item .sheet-thumb .sheet-overlay a.expand, .escenicas-item a.expand, #blog-seccion a.expand, #artistas-residentes a.expand,#contenido-tipo a.expand  {
   margin-right: 5px;
   position: relative;
   margin-bottom: 12px;
@@ -881,7 +884,8 @@ p.subtitle{
     line-height: 18px;
     font-style: italic;
 }
-.portfolio-overlay div.button-wrapper{
+.portfolio-overlay div.button-wrapper
+{
     position: absolute;
     bottom: 0;
 }
@@ -1194,8 +1198,7 @@ img.logo{
 .row.body-content .right-column {
     font-size: 14px;
 }
-.row.body-content .right-column, .row.footer-content .right-column,
-.row.body-content b {
+.row.body-content .right-column, .row.footer-content .right-column, .row.body-content b, #blog-ficha .header .tematica {
     font-family: Inter, Arial, sans-serif;
 }
 .row.body-content b  {
@@ -1316,7 +1319,7 @@ a.expand.negative:hover {
   background-color: transparent !important;
   color: #010101 !important;
 }
-a.expand:hover {
+a.expand:hover, a.expand.active {
   background-color: #010101;
   color:white;
 }
@@ -1388,4 +1391,267 @@ p.fecha {
 
 div#portfolio {
     margin-top: 14px;
+}
+
+.escenicas-item div.button-wrapper{
+    margin-top:10px;
+}
+
+.escenicas-item .filtro >div {
+    width: 19%;
+    display: inline-block;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    /* padding-right: 15px; */
+}
+
+#escenicas .container {
+    width: 500px;
+}
+/* BLOG-FICHA*/
+#blog-ficha {
+    margin-top: 19px;
+}
+
+#blog-ficha .item p {
+    font-size: 16px;
+    margin-bottom: 8px !important;
+}
+
+#blog-ficha .item h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+#blog-ficha .item .header {
+    margin-top: 13px;
+}
+
+#blog-ficha .item p.fecha {
+    margin-bottom: 4px !important;
+}
+
+#blog-ficha .item .content p {
+    /* font-family: Inter, Arial, sans-serif; */
+}
+
+#blog-ficha .item .tematica {}
+
+#blog-ficha .item .tematica {
+    text-transform: uppercase;
+    font-size: 10px !important;
+}
+#blog-ficha h3 {
+    text-transform: uppercase;
+    font-size: 21px;
+}
+#blog-ficha .item .copyright,
+#blog-seccion .item .copyright {
+    margin-bottom: 13px;
+}
+
+#blog-ficha .item .content {
+    margin-top: 21px;
+}
+
+#blog-ficha .item .content p {
+    font-size: 13px;
+    line-height: 17px;
+    margin-bottom: 16px !important;
+}
+#blog-ficha .content .video {
+    margin: 36px 0 36px 0;
+}
+
+#blog-ficha .navigator a.button {
+    text-transform: uppercase;
+    font-family: Inter, Arial, sans-serif;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#blog-ficha .navigator > div {
+    padding: 0;
+}
+#blog-ficha .navigator div a > i{
+    vertical-align: middle;
+}
+#blog-ficha .navigator div.text-left a > i {
+    margin-right: 12px;
+    /* line-height: 1px; */
+}
+#blog-ficha .navigator div.text-right a > i {
+    margin-left: 12px;
+}
+#blog-ficha .copyright span.text-left,
+#blog-seccion .copyright span.text-left {
+    font-size: 8px;
+    font-family: Inter,Arial, sans-serif;
+}
+
+#blog-ficha .copyright span.text-right,
+#blog-seccion .copyright span.text-right {
+    display: inline-block;
+    float: right;
+    font-size: 11px;
+}
+
+/*BLOG SECCION*/
+
+#blog-ficha .copyright,
+#blog-seccion .copyright {
+    padding-top: 3px;
+}
+#blog-seccion .item .thumb .overlay{
+  padding: 0px;
+  padding-bottom: 20px;
+}
+#blog-seccion .buscador input[type="text"] {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #010101;
+}
+
+#blog-seccion .buscador i.fa.fa-search {
+    position: absolute;
+    right: 16px;
+    font-size: 20px;
+}
+
+#blog-seccion .row.content {
+    margin-top: 20px;
+}
+
+/*ARTISTAS RESIDENTES - CONTENIDO TIPO*/
+
+#artistas-residentes .item .thumb .overlay h3,
+#contenido-tipo .item .thumb .overlay h3 
+{
+    font-size: 25px;
+    text-transform: uppercase;
+
+    margin-bottom: 23px;
+}
+#artistas-residentes .item .thumb .overlay p.fecha,
+#contenido-tipo .item .thumb .overlay p.fecha
+{
+    font-size:13px !important;
+    margin-top:14px;
+    margin-bottom:7px
+}
+#artistas-residentes .item .thumb .overlay .content p > b,
+#contenido-tipo .item .thumb .overlay .content p > b
+{
+    text-transform: none !important;
+}
+#artistas-residentes .item .thumb .overlay .content> p,
+#contenido-tipo .item .thumb .overlay .content> p {
+    font-size:13px;
+    line-height: 19px;
+    margin-bottom: 18px;
+}
+#artistas-residentes,#contenido-tipo {
+    margin-top: 20px;
+}
+
+.logo.colabora p.left {
+    font-size: 10px;
+    margin-bottom: 1.4em;
+}
+
+.logo.colabora img {
+    margin-left: 0;
+}
+.logo.colabora{
+    margin-top: 3em;
+    margin-bottom: 10em;
+}
+.carousel h3.text-center {
+    font-size: 24px;
+    line-height: 38px;
+    padding-top: 5px;
+}
+
+.artistas-residentes .carousel {
+    border-top: 1px solid #010101;
+    border-bottom: 1px solid #010101;
+}
+/*ARTISTAS RESIDENTES SECCION*/
+#artistas-residentes-seccion p.fecha {
+    margin-bottom: .3em;
+}
+
+#artistas-residentes-seccion h3.titulo {
+    margin-bottom: .2em;
+}
+
+#artistas-residentes-seccion .content .heading-section,
+#residencias-convocatorias-seccion .content .heading-section{
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+
+#artistas-residentes-seccion .portfolio-overlay.text-center,
+#residencias-convocatorias-seccion .portfolio-overlay.text-center {
+    min-height: auto !important;
+}
+
+#artistas-residentes-seccion .heading-section {
+    margin-top: 20px;
+}
+
+#artistas-residentes-seccion .heading-section .content {
+    font-size: 13px;
+    line-height: 17px;
+}
+
+#artistas-residentes-seccion .heading-section .content > p {
+    margin-top: 18px;
+}
+/*RESIDENCIAS CONVOCATORIAS SECCION*/
+#residencias-convocatorias-seccion {
+    margin-top: 20px;
+}
+/*CONTENIDO TIPO*/
+.center-column .item .thumb .overlay {
+    padding-top: 4px;
+}
+
+.image-text.text-right {
+    font-size: 10px;
+}
+
+.center-column .overlay> .content {
+    margin-top: 23px;
+}
+
+#contenido-tipo .button-wrapper a.expand {
+    text-align: left;
+    padding-left: 1.5em;
+}
+
+#contenido-tipo .section {font-family: "nocturne-serif", Arial, sans-serif;font-size: 18px;margin-bottom: 5em;}
+
+p.quote:after, p.quote:before {content: "\"";}
+
+#contenido-tipo h3.titulo {
+    font-size: 24px;
+}
+
+
+/*fountain*/
+.fountain {
+    position: absolute;
+    top: 122px;
+    left: 345px;
+    width: 302px;
+    height: 1423px;
+    /* background-color: #12121255; */
+    z-index: 10000;
+    display: block;
+    background-image: url('../../Conde Duque/2020-06-25/homefichaescenicasblog/HOME_FICHA_ESCENICAS_BLOG/05 ARTISTAS RESIDENTES/05-ARTISTAS-RESIDENTES_seccion.jpg');
+    background-position: -22px -106px;
+    background-size: 410%;
 }
