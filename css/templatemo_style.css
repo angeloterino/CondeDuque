@@ -321,10 +321,10 @@ hr {
   float: right;
   margin-top: 33px;
   margin-right: 30px;
-  text-align: center;
+  /* text-align: center; */
   line-height: 36px;
   font-size: 14px;
-  background: white;
+  background: transparent;
   display: inline-block;
   color: white;
   cursor:pointer;
@@ -431,9 +431,11 @@ hr {
     padding-left: 70px;
   }
   .toggle-menu {
+    width: 100%;
+    margin: 0;
     margin-top: 5px;
-    margin-right: 10px;
-    position: absolute;
+    z-index: 1;
+    height: auto;
   }
   .main-menu ul li {
     display: block;
@@ -544,6 +546,7 @@ hr {
     float: left;
     background: transparent;
     z-index: 1000;
+    width: 100%;
   }
   .main-header, .site-header{
     margin-top: 0;
@@ -581,9 +584,23 @@ hr {
     padding: .8rem
   }
   .toggle-menu .dropdown-submenu.open .dropdown-menu {
-     left: 223px;
-     position: absolute;
-     top: -18px;
+     left: 0;
+     float: right;
+     top: 0;
+     right: 0;
+     padding: 0;
+  }
+  .toggle-menu > .dropdown > a[role=button]{
+    position: absolute;
+    top: -42px;
+  }
+  .toggle-menu > .dropdown {
+    width: 100%;
+    position: absolute;
+  }
+  #portfolio {
+    padding-top: 0;
+    margin-top: 0; 
   }
 }
 @media screen and (max-width: 767px) {
@@ -624,6 +641,20 @@ hr {
   .heading-section {
     margin-bottom:1.25em !important;
     margin-bottom:1.25rem !important;
+  }
+  .toggle-menu .dropdown-menu {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0;
+  }
+  .toggle-menu .dropdown-submenu.open .dropdown-menu {
+    left: 0;
+    right: 0;
+    top: 0;
+    position: relative;
+    padding: 0;
   }
 }
 
@@ -1163,6 +1194,9 @@ ul.navbar-nav{
     margin-right: 0px !important;
     padding-right: 5px;
  }
+ .row.nav-bar{
+   clear:both;
+ }
  .site-footer .top-bar
  {
    margin-bottom: 40px;
@@ -1227,16 +1261,18 @@ ul.navbar-nav{
  }
  .top-social ul.social-icons {
 
-  display: inline-block;
+display: inline-block;
 
-  margin-top: 15px;
+margin-top: 15px;
 
-  padding-left: 0px;
+padding-left: 0px;
 
+z-index: 1;
 }
  .top-social .form-inline{
     display: inline-block;
     margin-right: 16px;
+    /* z-index: 2; */
  }
 .form-inline.search:focus-within input {
     border:1px solid #010101;
@@ -1297,7 +1333,7 @@ a:visited {
   left: -16px;
   top: 2px;
   max-width: 450px;
-  width: 241px;
+  width: 100%;
   position: relative;
 }
 .dropdown-menu{
