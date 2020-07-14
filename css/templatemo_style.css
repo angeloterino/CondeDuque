@@ -580,6 +580,11 @@ hr {
     font-size: .8rem;
     padding: .8rem
   }
+  .toggle-menu .dropdown-submenu.open .dropdown-menu {
+     left: 223px;
+     position: absolute;
+     top: -18px;
+  }
 }
 @media screen and (max-width: 767px) {
   .main-header, .site-header {
@@ -602,11 +607,23 @@ hr {
     margin-top: .5rem !important;
   }
   .ribbon {
-    top: -5rem !important;
+    top: -4rem !important;
     font-size: 1.1rem !important;
   }
   .site-header ul.social-icons li{
     margin-left:0;
+  }
+  .top-text{
+    position: relative !important;
+    top: 0 !important;
+    padding-bottom: .85em;
+    padding-bottom: 1rem;
+    font-size: 1.2em !important;
+    font-size: 1.2rem !important;
+  }
+  .heading-section {
+    margin-bottom:1.25em !important;
+    margin-bottom:1.25rem !important;
   }
 }
 
@@ -1254,11 +1271,13 @@ a:visited {
   color: #010101;
 }
 
-.main-menu .menu .menu-row .dropdown.show.open a {
-    background-color: #010101;
+.main-menu .menu .menu-row .dropdown.show.open a,
+.dropdown.show.open a {
+    /* background-color: #010101; */
     color: white;
 }
-.main-menu .menu .menu-row .dropdown.show.open a.dropdown-item {
+.main-menu .menu .menu-row .dropdown.show.open a.dropdown-item,
+.dropdown.show.open a.dropdown-item {
     display: block;
     width: 100%;
     text-align: left;
@@ -1273,6 +1292,13 @@ a:visited {
     top: 28px;
     max-width: 30%;
     padding: 16px;
+}
+.toggle-menu .open .dropdown-menu {
+  left: -16px;
+  top: 2px;
+  max-width: 450px;
+  width: 241px;
+  position: relative;
 }
 .dropdown-menu{
   transition: all 200ms ease-in-out;
@@ -1812,6 +1838,12 @@ div.toggle-menu i.fa {
     color: #010101;
     font-size: 2.3em;
     font-size: 2rem;
+}
+div.toggle-menu .dropdown-menu i.fa 
+{
+  color:white;
+  font-size: 2em;
+  margin-top: .1em;
 }
 .site-header .container.visible-xs{
   margin-top: 1.5rem;

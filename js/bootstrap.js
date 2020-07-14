@@ -707,8 +707,9 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
     var $parent  = getParent($this)
     var isActive = $parent.hasClass('open')
-
-    clearMenus()
+    
+    if(!$parent.hasClass('dropdown-submenu'))
+      clearMenus()
 
     if (!isActive) {
       if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
