@@ -331,6 +331,10 @@ hr {
   z-index: 1001;
 }
 
+.site-header .logo{
+  display: inline-block;
+  margin: 0 auto;
+}
 /*.menu-responsive {
   display: none;
   background-color: rgba(50, 50, 50, 0.88);
@@ -429,6 +433,11 @@ hr {
   .logo-wrapper a {
     line-height: 50px;
     padding-left: 70px;
+  }
+  .site-header .logo>.logo-header {
+    font-size: 0.8em;
+    padding-left: 2em;
+    padding-right: 2em;
   }
   .toggle-menu {
     width: 100%;
@@ -585,10 +594,12 @@ hr {
   }
   .toggle-menu .dropdown-submenu.open .dropdown-menu {
      left: 0;
-     float: right;
+     /* float: right; */
      top: 0;
      right: 0;
      padding: 0;
+     position: relative;
+     width: 100%;
   }
   .toggle-menu > .dropdown > a[role=button]{
     position: absolute;
@@ -601,6 +612,11 @@ hr {
   #portfolio {
     padding-top: 0;
     margin-top: 0; 
+  }
+  .dropdown.show.open a.dropdown-item{
+    font-size: 1.1em;
+    margin-left: 1.2em !important;
+    line-height: 38px !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -655,6 +671,7 @@ hr {
     top: 0;
     position: relative;
     padding: 0;
+    width: 100%;
   }
 }
 
@@ -1128,7 +1145,11 @@ font-size: 13px;
   text-transform: uppercase;
   font-size: 11px;
 }
-.logo>img{
+.logo>img.{
+  margin: 0 auto;
+}
+.logo>.img-responsive{
+  width: 100%;
   margin: 0 auto;
 }
 .navbar-nav>li.nav-item::before {
@@ -1330,11 +1351,12 @@ a:visited {
     padding: 16px;
 }
 .toggle-menu .open .dropdown-menu {
-  left: -16px;
-  top: 2px;
+  left: -20px;
+  right: -20px;
+  top: 0px;
   max-width: 450px;
-  width: 100%;
-  position: relative;
+  position: absolute;
+  margin-right: auto;
 }
 .dropdown-menu{
   transition: all 200ms ease-in-out;
@@ -1880,6 +1902,15 @@ div.toggle-menu .dropdown-menu i.fa
   color:white;
   font-size: 2em;
   margin-top: .1em;
+  margin-right: 1em;
+}
+div.toggle-menu .dropdown-submenu i.fa {
+  transform: rotate(0deg);
+  transition: transform ease-in-out 200ms;
+}
+div.toggle-menu .dropdown-submenu.open i.fa {
+  transform: rotate(90deg);
+  transition: transform ease-in-out 200ms;
 }
 .site-header .container.visible-xs{
   margin-top: 1.5rem;

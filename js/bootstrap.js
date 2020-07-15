@@ -710,9 +710,14 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     
     if(!$parent.hasClass('dropdown-submenu'))
       clearMenus()
-
-    if (!isActive) {
-      if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
+  
+    if (isActive) {
+       if($parent.hasClass('dropdown-submenu'))
+       {
+         $parent.removeClass('open').trigger('hidden.bs.dropdown')
+       }
+    }else{
+      if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length && !$parent.hasClass('dropdown-submenu')) {
         // if mobile we we use a backdrop because click events don't delegate
         $('<div class="dropdown-backdrop"/>').insertAfter($(this)).on('click', clearMenus)
       }
@@ -763,6 +768,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   }
 
   function clearMenus() {
+
     $(backdrop).remove()
     $(toggle).each(function (e) {
       var $parent = getParent($(this))
