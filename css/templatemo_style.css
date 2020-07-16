@@ -398,6 +398,12 @@ hr {
   text-transform: uppercase;
   font-weight: 700;
 }
+@media screen and (min-width: 768px)
+{
+  #sheet .body-content .center-column {
+    min-height:500px;
+  }
+}
 @media screen and (min-width: 989px) {
   .flexslider .slider-caption {
     top: 230px;
@@ -604,6 +610,7 @@ hr {
   .toggle-menu > .dropdown > a[role=button]{
     position: absolute;
     top: -42px;
+    background-color: transparent !important;
   }
   .toggle-menu > .dropdown {
     width: 100%;
@@ -617,6 +624,9 @@ hr {
     font-size: 1.1em;
     margin-left: 1.2em !important;
     line-height: 38px !important;
+  }
+  .carousel-content .tab-content .portfolio-item {
+    display:none;
   }
 }
 @media screen and (max-width: 767px) {
@@ -642,6 +652,10 @@ hr {
   .ribbon {
     top: -4rem !important;
     font-size: 1.1rem !important;
+  }
+  #sheet .ribbon {
+    bottom: 2em !important;
+    top: auto !important;
   }
   .site-header ul.social-icons li{
     margin-left:0;
@@ -897,6 +911,9 @@ hr {
   margin-top: 1px;
   display: inline-block;
   line-height: 27px;
+}
+.portfolio-item h3 a:hover, h4 a:hover {
+  text-decoration:underline;
 }
 .sheet-item .sheet-thumb .sheet-overlay h3{
   font-size:25px;
@@ -1237,6 +1254,10 @@ ul.navbar-nav{
    background: white;
    font-size: 12px;
  }
+   #sheet .ribbon {
+    bottom: 4em;
+    top: auto;
+  }
  .portfolio-item.cancelado .portfolio-thumb .portfolio-overlay::before,
  .sheet-item.cancelado .sheet-thumb .sheet-overlay:before {
      content:"CANCELADO"
@@ -1330,13 +1351,13 @@ a:visited {
 
 .main-menu .menu .menu-row .dropdown.show.open a,
 .dropdown.show.open a {
-    /* background-color: #010101; */
+    background-color: #010101;
     color: white;
 }
 .main-menu .menu .menu-row .dropdown.show.open a.dropdown-item,
 .dropdown.show.open a.dropdown-item {
     display: block;
-    width: 100%;
+    width: 99%;
     text-align: left;
     font-weight: 100;
     line-height: 34px;
@@ -1375,7 +1396,7 @@ a:visited {
     text-transform: uppercase;
     font-size: 12px;
 }
-.sheet-item.ultimas .sheet-thumb .sheet-overlay:before{
+.sheet-item.ultimas .sheet-thumb .sheet-overlay:after{
   top: -48px;
   left: 0;
 }
@@ -1435,9 +1456,14 @@ img.logo{
 .row.footer-content p {
     margin-bottom: .8em;
 }
+.row.body-content .tematica> p,
 .row.footer-content .tematica> p{
     margin-bottom: 2em;
-    font-size: 12px;
+    font-size: 12px !important;
+}
+.row.body-content .tematica p > b,
+.row.footer-content .tematica p > b{
+    text-transform: none  ;
 }
 .row.body-content .right-column p,
 .row.footer-content .right-column p {
@@ -1491,17 +1517,20 @@ a.jobo {
     width: 50%;
     display: block;
 }
-.row.footer-content .tematica {
+.row.footer-content .tematica, 
+.row.body-content .tematica {
     font-family: Inter, Arial, sans-serif;
     font-size: 14px;
     margin-top: 80px;
     /* margin-bottom: 80px; */
 }
-.row.footer-content .logo.inaem {
+.row.footer-content .logo.inaem,
+.row.body-content .logo.inaem {
     margin-top: 80px;
     display: block;
 }
-.row.footer-content .logo.inaem > img{
+.row.footer-content .logo.inaem > img,
+.row.body-content .logo.inaem > img{
     margin: 0;
 }
 .col-lg-3.right-column h2 {
@@ -1561,6 +1590,14 @@ a.expand:hover, a.expand.active {
 {
     padding-right: 0;
 }
+#sheet .nav-tabs.nav-justified>li>a {
+    margin-bottom: 0;
+}
+#sheet .nav-tabs.nav-justified>li {
+    display: table-cell;
+    width: 1%;
+}
+
 .blog-item h3 {
   font-size: 25px;
   margin-top: 2px;
@@ -1922,4 +1959,40 @@ div.toggle-menu .dropdown-submenu.open i.fa {
 }
 .site-header .container.visible-xs .logo-header{
   margin: .5rem
+}
+
+.carousel-content .portfolio-item.active {
+    display:block;
+}
+.nav-wrapper.long-tabs ul.nav.nav-tabs.nav-justified {
+    position: absolute;
+    display: block;
+    height: auto;
+    right: 0;
+}
+.nav-wrapper.long-tabs ul.nav.nav-tabs > li {
+    position: absolute;
+    margin: 0;
+    min-width: 50%;
+}
+.nav-wrapper.long-tabs ul.nav.nav-tabs li a
+{
+    background: white;
+    z-index: 0;
+    border-color: inherit !important;
+}
+.nav-wrapper.long-tabs ul.nav.nav-tabs li.active a {
+    z-index: 1;
+    border-bottom: 2px solid white !important;
+}
+.nav-wrapper.long-tabs {
+    position: relative;
+    min-height: 40px;
+}
+.nav-wrapper.long-tabs ul.nav.nav-tabs > li:nth-child(2) {
+    right: 0;
+}
+.carousel {
+  padding-left:15px;
+  padding-right:15px;
 }
