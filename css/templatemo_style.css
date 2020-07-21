@@ -1,11 +1,9 @@
-/* 
-
-Flex Template 
-
-https://templatemo.com/tm-406-flex
-
-*/
-
+::placeholder {
+    color: inherit !important;
+    opacity:1;
+    font-family: Inter, Arial, sans-serif;
+    text-align: right;
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -275,7 +273,7 @@ hr {
 #menu-wrapper {
   background-color: white;
   -moz-box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.07);
-  border-top: 1px solid #010101;
+  border-bottom: 1px solid #010101;
   font-size:14px;
 }
 
@@ -687,6 +685,26 @@ hr {
     padding: 0;
     width: 100%;
   }
+  /* BLOG */
+  #blog-ficha .left-column h3 {
+    margin-bottom: 2em;
+  }
+  #blog-ficha p.fecha-publicacion {
+      font-size: 18px;
+      font-family: Inter,Arial,sans-serif;
+      margin-top: 2em;
+  }
+  #blog-seccion .buscador .col-lg-10.col-xs-12 {
+    margin-bottom: 2em;
+  }
+
+  #blog-seccion .buscador > div {
+    padding: 0;
+  }
+  #blog-seccion .buscador i.fa.fa-search {
+    font-size: 2em !important;
+    right: 0 !important;
+  }
 }
 
 @media screen and (max-height: 500px) {
@@ -925,7 +943,7 @@ hr {
   font-size: 10px;
   border: 1px solid #010101;
   -moz-border-radius: 18px;
-  padding: 8px 12px 9px 7px;
+  padding: 10px;
   text-transform: uppercase;
   display: inline-block;
   text-align: center;
@@ -1127,17 +1145,20 @@ p.subtitle{
 .site-header .top-bar{
   background-color: black;
   color: white;
-  padding: .5em;
+  padding: .5em 0 .5em 0;
   font-size: 10px;
   font-family: lato,sans-serif;
 }
 .top-bar .text{
-  margin-top: .5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   display: inline-block;
 }
 .top-bar .icon img{
+  margin: .30em;
   display: inline-block;
-  vertical-align: text-top;
+  vertical-align: middle;
+  height: 1em;
 }
 .navbar-nav>li {
   text-transform: uppercase;
@@ -1183,6 +1204,7 @@ font-size: 13px;
     background-color: #010101;
     font-size:12px;
     font-family: lato,sans-serif;
+    padding: .5em 0 .5em 0;
 }
 .low-bar a {
     color: white !important;
@@ -1201,7 +1223,7 @@ ul.navbar-nav{
 }
 .low-bar p
 {
-  margin: 10px;
+  margin: 1em 0 1em 0;
 }
 .site-footer ul.social-icons
 {
@@ -1269,7 +1291,7 @@ ul.navbar-nav{
  }
  .menu .menu-row {
    line-height: 35px;
-   border-bottom: 1px solid #010101;
+   border-top: 1px solid #010101;
  }
  .menu .menu-row a {
    display: inline-block;
@@ -1277,6 +1299,7 @@ ul.navbar-nav{
    float: left;
    border: 0;
    padding-top: .2em;
+   padding-bottom: .2em;
  }
  .bar-wrapper {
 		background-color: #010101;
@@ -1350,7 +1373,8 @@ a:visited {
 }
 
 .main-menu .menu .menu-row .dropdown.show.open a,
-.dropdown.show.open a {
+.dropdown.show.open a,
+.menu a.active {
     background-color: #010101;
     color: white;
 }
@@ -1367,7 +1391,7 @@ a:visited {
     background-color: #010101;
     border: 0;
     border-radius: 0;
-    top: 28px;
+    top: 38px;
     max-width: 30%;
     padding: 16px;
 }
@@ -1656,22 +1680,75 @@ p.fecha {
 div#portfolio {
     margin-top: 14px;
 }
+/* ARTES ESCÃ‰NICAS*/
 
 .escenicas-item div.button-wrapper{
     margin-top:10px;
 }
 
 .escenicas-item .filtro >div {
-    width: 19%;
+    width: 129px;
     display: inline-block;
     position: relative;
     min-height: 1px;
     padding-left: 15px;
-    /* padding-right: 15px; */
+    padding-right: 0;
 }
 
 #escenicas .container {
-    width: 500px;
+    /* width: 500px; */
+}
+.escenicas-item .filtro .input-group input,
+.escenicas-item .filtro .input-group button
+{
+    border: none;
+    box-shadow: none;
+    border-radius: 4px;
+} 
+.escenicas-item .filtro .input-group input[type=text] {
+    color: inherit;
+    background-color: white;
+    padding: 1px;
+    font-family: Inter, Arial, sans-serif;
+}
+.escenicas-item p.content{
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 1em;
+}
+.escenicas-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+#escenicas .filtro .input-group input,
+#escenicas .filtro .input-group button
+{
+    border: none;
+    box-shadow: none;
+} 
+#escenicas .filtro .input-group input[type=text] {
+    color: inherit;
+    background-color: white;
+}
+#escenicas .filtro .input-group button[type=button] {
+    padding: 5px;
+}
+#escenicas .filtro .input-group button[type=button]:hover,
+#escenicas .filtro .input-group button[type=button]:active,
+#escenicas .filtro .input-group button[type=button]:focus {
+    background-color: transparent !important;
+    border-radius: 0;
+    border-color: transparent !important;
+    outline-color: transparent;
+}
+
+#escenicas .autocomplete span.fa.fa-caret-down {
+    font-size: 26px !important;
+}
+
+#escenicas .filtro {
+    margin-top: 2.5em;
 }
 /* BLOG-FICHA*/
 #blog-ficha {
@@ -1680,7 +1757,7 @@ div#portfolio {
 
 #blog-ficha .item p {
     font-size: 16px;
-    margin-bottom: 8px !important;
+    margin-bottom: 8px;
 }
 
 #blog-ficha .item h3 {
@@ -1694,13 +1771,17 @@ div#portfolio {
 
 #blog-ficha .item p.fecha {
     margin-bottom: 4px !important;
+    margin-top: 16px;
 }
 
 #blog-ficha .item .content p {
     /* font-family: Inter, Arial, sans-serif; */
 }
 
-#blog-ficha .item .tematica {}
+#blog-ficha .item .tematica {
+    margin-top: auto;
+    margin-bottom: 1em;
+}
 
 #blog-ficha .item .tematica {
     text-transform: uppercase;
@@ -1812,7 +1893,7 @@ div#portfolio {
 }
 #artistas-residentes .item .thumb .overlay .content> p,
 #contenido-tipo .item .thumb .overlay .content> p {
-    font-size:13px;
+    font-size: 14px;
     line-height: 19px;
     margin-bottom: 18px;
 }
@@ -1883,8 +1964,9 @@ div#portfolio {
     padding-top: 4px;
 }
 
-.image-text.text-right {
+#contenido-tipo .image-text.text-right {
     font-size: 10px;
+    margin-top: 1em;
 }
 
 .center-column .overlay> .content {
@@ -1896,12 +1978,21 @@ div#portfolio {
     padding-left: 1.5em;
 }
 
-#contenido-tipo .section {font-family: "nocturne-serif", Arial, sans-serif;font-size: 18px;margin-bottom: 5em;}
-
+#contenido-tipo .right-column .section {
+  font-family: "nocturne-serif", Arial, sans-serif;
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+#contenido-tipo .right-column .section:first-child {
+  margin-top  :0;
+}
 p.quote:after, p.quote:before {content: "\"";}
 
 #contenido-tipo h3.titulo {
     font-size: 24px;
+}
+#contenido-tipo .col-lg-3 {
+  padding-top: 1.5em;
 }
 
 /*PAGINA BASICA*/
