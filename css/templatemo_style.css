@@ -168,7 +168,12 @@ a:hover {
   color: black;
   text-decoration: none;
 }
-
+a.goggle-map {
+    font-size: 14px;
+}
+a.goggle-map:hover {
+    text-decoration: underline;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: nocturne-serif, Arial, sans-serif;
 }
@@ -705,6 +710,12 @@ hr {
     font-size: 2em !important;
     right: 0 !important;
   }
+  #info-practica {
+    margin-bottom:3em;
+  }
+  #info-practica h3.titulo{
+    margin-bottom:1em;
+  }
 }
 
 @media screen and (max-height: 500px) {
@@ -839,20 +850,23 @@ hr {
 #blog-seccion .item .thumb {
   position: relative;
 }
-.portfolio-item .portfolio-thumb img,
-.sheet-item .sheet-thumb img,
-#blog-seccion .item .thumb img {
+.portfolio-item .portfolio-thumb img, .sheet-item .sheet-thumb img, #blog-seccion .item .thumb img, .item .thumb img {
   width: 100%;
   margin-top: 12px;
 }
 .portfolio-item .portfolio-thumb .portfolio-overlay, .sheet-item .sheet-thumb .sheet-overlay, .blog-item,
-#blog-seccion .item .thumb .overlay  {
+#blog-seccion .item .thumb .overlayy  {
   position: relative;
   width: 100%;
   height: 100%;
   padding: 12px;
   visibility: visible;
   -moz-transition: all 200ms ease-in-out;
+}
+.item .thumb .overlay  {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .sheet-item .sheet-thumb .sheet-overlay {
    padding-left: 0;
@@ -933,10 +947,11 @@ hr {
 .portfolio-item h3 a:hover, h4 a:hover {
   text-decoration:underline;
 }
-.sheet-item .sheet-thumb .sheet-overlay h3{
+.sheet-item .sheet-thumb .sheet-overlay h3,
+.row.header-content .item h3{
   font-size:25px;
 }
-.portfolio-item .portfolio-thumb .portfolio-overlay a.expand, .sheet-item .sheet-thumb .sheet-overlay a.expand, .escenicas-item a.expand, #blog-seccion a.expand, #artistas-residentes a.expand,#contenido-tipo a.expand  {
+.portfolio-item .portfolio-thumb .portfolio-overlay a.expand, .sheet-item .sheet-thumb .sheet-overlay a.expand, .escenicas-item a.expand, #blog-seccion a.expand, #artistas-residentes a.expand, #contenido-tipo a.expand, .button-wrapper a  {
   margin-right: 5px;
   position: relative;
   margin-bottom: 12px;
@@ -1368,7 +1383,7 @@ z-index: 1;
 .main-menu .menu .menu-row a.text-right{
   padding-right:15px;
 }
-a:visited {
+a:visited, a:hover, a:focus {
   color: #010101;
 }
 
@@ -1416,7 +1431,7 @@ a:visited {
     left: 0px;
     font-size: 14px;
 }
-.left-column .sheet-item h5 {
+#sheet .left-column .sheet-item h5, #residencias .left-column .item h5 {
     text-transform: uppercase;
     font-size: 12px;
 }
@@ -1433,9 +1448,15 @@ a:visited {
 }
 
 .sheet-item .copyright {
-    margin-top: 0;
+    margin-top: 2px;
     font-size: 12px;
 }
+
+.item .content p {
+    font-size: 13px;
+    line-height: 17px;
+}
+
 ul.nav.nav-tabs li>a {
     border-color: #010101 !important;
     border-left-color: transparent !important;
@@ -1457,7 +1478,7 @@ ul.nav.nav-tabs {
     margin-left: -15px;
     margin-right: -15px;
 }
-div#sheet {
+div#sheet, div#residencias {
     padding-bottom: 40px;
 }
 img.logo{
@@ -1473,7 +1494,7 @@ img.logo{
 .row.body-content .right-column, .row.footer-content .right-column, .row.body-content b, #blog-ficha .header .tematica {
     font-family: Inter, Arial, sans-serif;
 }
-.row.body-content b  {
+#sheet .row.body-content b  {
     text-transform: uppercase;
 }
 .row.body-content p,
@@ -1556,6 +1577,10 @@ a.jobo {
 .row.footer-content .logo.inaem > img,
 .row.body-content .logo.inaem > img{
     margin: 0;
+}
+.row.body-content .center-column p{
+  font-size:13px;
+  line-height:17px;
 }
 .col-lg-3.right-column h2 {
     font-size: 20px;
@@ -1711,12 +1736,14 @@ div#portfolio {
     padding: 1px;
     font-family: Inter, Arial, sans-serif;
 }
-.escenicas-item p.content{
+#escenicas .escenicas-item p.content,
+#pagina-basica-legal .item p.content{
     font-size: 12px;
     line-height: 18px;
     margin-bottom: 1em;
 }
-.escenicas-item h3 {
+#escenicas .escenicas-item h3,
+#pagina-basica-legal .item h3 {
   font-size: 1.5em;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -1891,16 +1918,14 @@ div#portfolio {
 {
     text-transform: none !important;
 }
-#artistas-residentes .item .thumb .overlay .content> p,
-#contenido-tipo .item .thumb .overlay .content> p {
+#artistas-residentes .item .thumb .overlay .content> p, #contenido-tipo .item .thumb .overlay .content> p, .item .content> p {
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 18px;
 }
-#artistas-residentes,#contenido-tipo {
+#artistas-residentes, #contenido-tipo {
     margin-top: 20px;
 }
-
 .logo.colabora p.left {
     font-size: 10px;
     margin-bottom: 1.4em;
@@ -1959,21 +1984,58 @@ div#portfolio {
 #residencias-convocatorias-seccion {
     margin-top: 20px;
 }
+/*RESIDENCIAS CONVOCATORIAS*/
+#residencias .logo.colabora.inaem.text-left {
+    margin-bottom: 1em;
+}
+
+#residencias .center-column .item ul {
+    list-style: disc;
+    line-height: 28px;
+}
+
+#residencias .center-column .item ul li {
+    font-weight: 600;
+    font-family: Inter, Arial, sans-serif;
+}
+
+#residencias .right-column .button-wrapper {
+    margin-top: 2em;
+}
+#residencias .header-content .left-column .overlay,#residencias .header-content .left-column .item {
+    padding: 0;
+}
+#residencias .copyright.text-right {
+    margin-top: 4px;
+}
+
+#residencias .center-column .item {
+    margin-top: 2em;
+}
+#residencias .section.formulario a {
+    font-size: 12px;
+}
+#residencias .section.formulario a:hover {
+    text-decoration: underline;
+}
+#residencias .right-column .button-wrapper p {
+    margin-bottom: .5em !important;
+}
 /*CONTENIDO TIPO*/
-.center-column .item .thumb .overlay {
+#contenido-tipo .center-column .item .thumb .overlay {
     padding-top: 4px;
 }
 
-#contenido-tipo .image-text.text-right {
+#contenido-tipo .image-text.text-right,#info-practica .image-text.text-right {
     font-size: 10px;
     margin-top: 1em;
 }
 
-.center-column .overlay> .content {
+#contenido-tipo .center-column .overlay> .content {
     margin-top: 23px;
 }
 
-#contenido-tipo .button-wrapper a.expand {
+#contenido-tipo .button-wrapper a.expand,#info-practica .button-wrapper a.expand {
     text-align: left;
     padding-left: 1.5em;
 }
@@ -1988,10 +2050,10 @@ div#portfolio {
 }
 p.quote:after, p.quote:before {content: "\"";}
 
-#contenido-tipo h3.titulo {
+#contenido-tipo h3.titulo, #info-practica h3.titulo {
     font-size: 24px;
 }
-#contenido-tipo .col-lg-3 {
+#contenido-tipo .col-lg-3,#info-practica .left-column {
   padding-top: 1.5em;
 }
 
@@ -2004,6 +2066,22 @@ p.quote:after, p.quote:before {content: "\"";}
 
 #pagina-basica {
     margin-bottom: 80px;
+}
+#pagina-basica-legal .item p.title{
+  font-weight: 700 !important;
+  font-size: 100%;
+}
+#pagina-basica-legal .item p.content
+{
+  margin-bottom:2em;
+}
+/*INFO PRACTICA*/
+
+#info-practica .body-content .center-column .item {
+    padding-top: 2em;
+}
+#info-practica .button-wrapper.clearfix {
+    margin-bottom: 3em;
 }
 
 /*fountain*/
