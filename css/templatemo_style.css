@@ -338,6 +338,9 @@ hr {
   display: inline-block;
   margin: 0 auto;
 }
+.copyright {
+  margin-top: 4px;
+}
 /*.menu-responsive {
   display: none;
   background-color: rgba(50, 50, 50, 0.88);
@@ -630,6 +633,26 @@ hr {
   }
   .carousel-content .tab-content .portfolio-item {
     display:none;
+  }
+  .contenido-tipo .col-lg-3,
+  #contenido-tipo .col-lg-3,
+  #info-practica .col-lg-3{
+    padding-top: 1.5em !important;
+  }
+  .contenido-tipo h3.titulo, #contenido-tipo h3.titulo, #info-practica h3.titulo{
+    padding-top: 1.5em !important;
+    padding-bottom: 1em !important;
+  }
+  .buscadores input.form-control{
+    padding: 1.5em;
+  }
+  .buscadores i.fa.fa-search{
+    font-size: 36px !important;
+    right: 28px !important;
+  }
+  .buscadores .buscador .content{
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1702,7 +1725,7 @@ p.fecha {
     line-height: 14px;
 }
 
-div#portfolio {
+div#portfolio, .programacion {
     margin-top: 14px;
 }
 /* ARTES ESCÃ‰NICAS*/
@@ -1736,14 +1759,12 @@ div#portfolio {
     padding: 1px;
     font-family: Inter, Arial, sans-serif;
 }
-#escenicas .escenicas-item p.content,
-#pagina-basica-legal .item p.content{
+.escenicas .item p.content,#escenicas .escenicas-item p.content, #pagina-basica-legal .item p.content{
     font-size: 12px;
     line-height: 18px;
     margin-bottom: 1em;
 }
-#escenicas .escenicas-item h3,
-#pagina-basica-legal .item h3 {
+.escenicas .item h3, #escenicas .escenicas-item h3, #pagina-basica-legal .item h3 {
   font-size: 1.5em;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -1823,7 +1844,8 @@ div#portfolio {
     margin-bottom: 13px;
 }
 
-#blog-ficha .item .content {
+#blog-ficha .item .content,
+.ficha .item .content {
     margin-top: 21px;
 }
 
@@ -1918,7 +1940,7 @@ div#portfolio {
 {
     text-transform: none !important;
 }
-#artistas-residentes .item .thumb .overlay .content> p, #contenido-tipo .item .thumb .overlay .content> p, .item .content> p {
+#artistas-residentes .item .thumb .overlay .content> p, #contenido-tipo .item .thumb .overlay .content> p, .item .content> p, .ficha .item .content> p {
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 18px;
@@ -2025,17 +2047,21 @@ div#portfolio {
 #contenido-tipo .center-column .item .thumb .overlay {
     padding-top: 4px;
 }
-
-#contenido-tipo .image-text.text-right,#info-practica .image-text.text-right {
+.contenido-tipo .image-text.text-right,
+#contenido-tipo .image-text.text-right,
+#info-practica .image-text.text-right {
     font-size: 10px;
     margin-top: 1em;
 }
-
+.contenido-tipo .center-column .item> .content,
 #contenido-tipo .center-column .overlay> .content {
-    margin-top: 23px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
-#contenido-tipo .button-wrapper a.expand,#info-practica .button-wrapper a.expand {
+.contenido-tipo .button-wrapper a.expand,
+#contenido-tipo .button-wrapper a.expand,
+#info-practica .button-wrapper a.expand {
     text-align: left;
     padding-left: 1.5em;
 }
@@ -2050,11 +2076,17 @@ div#portfolio {
 }
 p.quote:after, p.quote:before {content: "\"";}
 
-#contenido-tipo h3.titulo, #info-practica h3.titulo {
+.contenido-tipo h3.titulo,
+#contenido-tipo h3.titulo, 
+#info-practica h3.titulo {
     font-size: 24px;
+    padding-bottom: .5em;
+    padding-top:.5em;
 }
-#contenido-tipo .col-lg-3,#info-practica .left-column {
-  padding-top: 1.5em;
+.contenido-tipo .col-lg-3, 
+#contenido-tipo .col-lg-3, 
+#info-practica .left-column {
+  padding-top: 3em;
 }
 
 /*PAGINA BASICA*/
@@ -2082,6 +2114,47 @@ p.quote:after, p.quote:before {content: "\"";}
 }
 #info-practica .button-wrapper.clearfix {
     margin-bottom: 3em;
+}
+
+/*BUSCADORES*/
+.buscadores span.encontrados {
+    font-size: 20px;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.buscadores input.form-control {
+    border-color: #010101;
+    border-radius: 0;
+}
+.buscadores .col-md-6.col-xs-12 {
+    padding: 1.5em;
+    font-size: 12px;
+}
+.buscadores .col-md-6.col-xs-12.float-right {
+    padding: .5em;
+}
+
+.buscadores i.fa.fa-search {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 25px;
+}
+/*PROGRAMACION ONLINE*/
+.programacion .heading-section {
+  margin-bottom: 32px;
+}
+.programacion .portfolio-overlay .button-wrapper p {
+    font-size: 12px !important;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.programacion .portfolio-overlay .button-wrapper a.expand {
+    margin-top: 1em;
+}
+
+.programacion .portfolio-overlay {
+    padding-bottom: 80px;
 }
 
 /*fountain*/
@@ -2152,7 +2225,7 @@ div.toggle-menu .dropdown-submenu.open i.fa {
 }
 .nav-wrapper.long-tabs ul.nav.nav-tabs li.active a {
     z-index: 1;
-    border-bottom: 2px solid white !important;
+    border-bottom: 1px solid white !important;
 }
 .nav-wrapper.long-tabs {
     position: relative;
@@ -2160,6 +2233,8 @@ div.toggle-menu .dropdown-submenu.open i.fa {
 }
 .nav-wrapper.long-tabs ul.nav.nav-tabs > li:nth-child(2) {
     right: 0;
+    border-left: transparent;
+    margin-left: -1px;
 }
 .carousel {
   padding-left:15px;
