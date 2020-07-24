@@ -646,14 +646,21 @@ hr {
   .buscadores input.form-control{
     padding: 1.5em;
   }
-  .buscadores i.fa.fa-search{
+  .buscadores i.fa.fa-calendar, .buscadores i.fa.fa-search{
     font-size: 36px !important;
     right: 28px !important;
+  }
+  .buscadores i.fa.fa-calendar{
+    top:22px!important;
+  }
+  .buscadores i.fa.fa-search{
+    top:18px !important;  
   }
   .buscadores .buscador .content{
     padding-left: 10px;
     padding-right: 10px;
   }
+  
 }
 @media screen and (max-width: 767px) {
   .main-header, .site-header {
@@ -738,6 +745,55 @@ hr {
   }
   #info-practica h3.titulo{
     margin-bottom:1em;
+  }
+  #escenicas .filtro > div:first-child .dropdown.open .dropdown-menu {
+    right: auto;
+    left: 0;
+  }
+  .escenicas .escenicas-item h3
+  {
+    text-align: center;
+    margin: 0 auto;
+  }
+  /*PRENSA*/
+  .prensa .buscadores .col-md-6.col-xs-12{} 
+  .prensa .buscadores .col-md-5.col-sm-12.col-xs-12.float-right {
+    margin-top: 1em;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .prensa .buscadores .fechas input.form-control {
+    margin-right: 1em !important;
+  }
+  .prensa div > div label {
+    padding-left: 0 !important;
+  }
+  .prensa .buscadores .col-md-6.col-xs-12{
+    margin-top: 2em;
+    padding: 1.5em !important;
+  }
+  .prensa .buscadores .col-md-7.col-sm-12.col-xs-12.fechas
+  {
+    padding-left:0;
+  }
+  .prensa .buscadores .buscador .content
+  {
+    padding: 1em !important
+  }
+  .prensa .nav-wrapper.long-tabs ul.nav.nav-tabs li a {
+    font-size: 1em !important;
+    padding: 2em !important;
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+  }
+  .prensa .nav-wrapper.long-tabs ul.nav.nav-tabs li {
+    max-width: 75% !important;
+  }
+  .prensa .nav-wrapper.long-tabs ul.nav.nav-tabs li.active a{
+    border-left-color: #010101 !important;
+  }
+  .prensa #notas{
+    margin-top: 3em;
   }
 }
 
@@ -1429,7 +1485,7 @@ a:visited, a:hover, a:focus {
     background-color: #010101;
     border: 0;
     border-radius: 0;
-    top: 38px;
+    top: 2.4rem;
     max-width: 30%;
     padding: 16px;
 }
@@ -1728,7 +1784,7 @@ p.fecha {
 div#portfolio, .programacion {
     margin-top: 14px;
 }
-/* ARTES ESCÃ‰NICAS*/
+/* ARTES ESCÃƒâ€°NICAS*/
 
 .escenicas-item div.button-wrapper{
     margin-top:10px;
@@ -1781,6 +1837,8 @@ div#portfolio, .programacion {
 }
 #escenicas .filtro .input-group button[type=button] {
     padding: 5px;
+    vertical-align: baseline;
+    font-family: Inter, Arial, sans-serif;
 }
 #escenicas .filtro .input-group button[type=button]:hover,
 #escenicas .filtro .input-group button[type=button]:active,
@@ -1791,7 +1849,7 @@ div#portfolio, .programacion {
     outline-color: transparent;
 }
 
-#escenicas .autocomplete span.fa.fa-caret-down {
+#escenicas .autocomplete span.fa.fa-caret-down, #escenicas .autocomplete span.fa.fa-caret-up {
     font-size: 26px !important;
 }
 
@@ -2134,7 +2192,7 @@ p.quote:after, p.quote:before {content: "\"";}
     padding: .5em;
 }
 
-.buscadores i.fa.fa-search {
+.buscadores i.fa.fa-search, .buscadores i.fa.fa-calendar {
     position: absolute;
     right: 20px;
     top: 10px;
@@ -2155,6 +2213,164 @@ p.quote:after, p.quote:before {content: "\"";}
 
 .programacion .portfolio-overlay {
     padding-bottom: 80px;
+}
+/*ESCENICAS*/
+#escenicas .filtro .dropdown.open .dropdown-menu {
+    max-height: 268px;
+    transition: all ease-in-out 200ms;
+    background-color:white !important;
+    color: #010101 !important;
+    font-family: Inter, Arial,sant-serif;
+    position: absolute;
+    right: 0;
+    left: auto;
+    padding: 4px;
+    width: auto;
+    /* box-shadow: none; */
+    height: auto;
+    max-width: initial;
+}
+
+#escenicas .dropdown-menu {
+    max-height: 0px;
+    height: 0px;
+}
+
+#escenicas .filtro .dropdown a.dropdown-item {
+    color: inherit;
+    background: inherit;
+    margin-left: 0 !important;
+}
+
+#escenicas .filtro .dropdown.open span.fa.fa-caret-up {
+    transform: rotate(180deg);
+}
+#escenicas .filtro .dropdown span.fa.fa-caret-up {
+    transform: rotate(0deg);
+    transition: transform ease-in-out 200ms;
+    padding: 2px 5px 6px 5px;
+}
+#escenicas .filtro .dropdown.open button[type=button]
+{
+  opacity: .5;
+  transition: all ease-in-out 200ms;
+}
+#escenicas .button-wrapper.text-center a.expand{
+  margin-right:2em;
+}
+/*PRENSA*/
+.prensa .heading-section.buscadores > div:first-child {margin-bottom: 3em;}
+.prensa .tab-content .tab-pane > .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.prensa .nav-wrapper.long-tabs{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.prensa {
+    margin-top: 3em;
+}
+
+.prensa .heading-section.buscadores {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+    margin-top: 1em;
+}
+
+.prensa .buscadores .col-md-6.col-xs-12.float-right {
+    padding-right: 0;
+}
+
+.prensa .nav-wrapper.long-tabs ul.nav.nav-tabs li a {
+    font-size: 1.3rem;
+}
+
+.prensa .portfolio-overlay p.content {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.prensa .portfolio-overlay {
+    min-height: 200px !important;
+}
+.prensa .buscadores .col-md-6.col-xs-12.float-right {
+    padding-right: 0;
+}
+
+.prensa .nav-wrapper.long-tabs ul.nav.nav-tabs li a {
+}
+
+.prensa .portfolio-overlay p.content {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.prensa .portfolio-overlay {
+    min-height: 200px !important;
+}
+
+.prensa .buscadores label {
+    vertical-align: baseline;
+    margin-left: 0;
+    margin-right: auto;
+    font-size: 14px;
+    font-family: Inter,Arial,sans-serif;
+    font-weight: 100;
+    padding-top: .8em;
+    padding-right: 0;
+    padding-left: 2em;
+}
+
+.prensa .fechas > div {
+    padding: 0 !important;
+}
+.prensa .fechas > div:first-child label {
+    padding-left: 0;
+}
+
+.prensa .buscadores .fechas input.form-control {
+    width: auto;
+    display: inline-block;
+    padding-left: 5%;
+    position: absolute;
+    right: 0;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.prensa .buscadores i.fa.fa-calendar, .prensa .buscadores i.fa.fa-search {
+    top: 4px;
+}
+.prensa .buscadores i.fa.fa-calendar{
+    right:10px;
+}
+
+.prensa input.form-control.form-control-sm {
+    position: absolute;
+    right: 14px;
+    width: 75%;
+}
+
+.prensa .buscadores .col-md-5.col-sm-12.col-xs-12.float-right {
+    padding-left: 0;
+}
+
+.prensa .buscadores .col-md-7.col-sm-12.col-xs-12.fechas {
+    padding-right: 0;
+}
+.prensa .heading-section.buscadores > div:first-child {margin-bottom: 3em;}
+.prensa .portfolio-overlay {
+  padding: 1rem !important;
+}
+.prensa .portfolio-item.white .portfolio-thumb .portfolio-overlay {
+    border: 1px solid #B2B2B2;
+    border-top: 0;
+}
+#notas .portfolio-item.white .portfolio-thumb .portfolio-overlay {
+  border-top: 1px solid #B2B2B2 !important;
 }
 
 /*fountain*/
@@ -2225,7 +2441,7 @@ div.toggle-menu .dropdown-submenu.open i.fa {
 }
 .nav-wrapper.long-tabs ul.nav.nav-tabs li.active a {
     z-index: 1;
-    border-bottom: 1px solid white !important;
+    border-bottom: 2px solid white !important;
 }
 .nav-wrapper.long-tabs {
     position: relative;

@@ -186,7 +186,7 @@ https://templatemo.com/tm-406-flex
             </div> <!-- /.site-header -->
         </div> <!-- /.site-main -->
 		
-		<div class="content-section" id="escenicas">
+		<div class="content-section escenicas" id="escenicas">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -202,51 +202,103 @@ https://templatemo.com/tm-406-flex
 									<div class="filtro text-center">
 										<div class="">
 											<div class="autocomplete input-group" selected="">
-												<input type="text" placeholder="DISCIPLINA" class="lookup form-control">
+												<input type="hidden" id="hfDisciplina" value="DISCIPLINA">
 												<span class="input-group-btn">
-													<button class="btn btn-default" type="button" tabindex="-1">
-														<span class="fa fa-caret-down"></span>
-													</button>
+													<div class="dropdown show">
+														<button class="btn btn-default" type="button" id="ddDisciplina" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															DISCIPLINA <span class="fa fa-caret-up"></span>
+														</button>
+														<div class="dropdown-menu" aria-labelledby="ddDisciplina">
+															<a href="#" class="dropdown-item">Convocatoria</a>
+															<a href="#" class="dropdown-item">Residencias</a>
+															<a href="#" class="dropdown-item">Ensayo abierto</a>
+															<a href="#" class="dropdown-item">Masterclass</a>
+															<a href="#" class="dropdown-item">Laboratorio</a>
+															<a href="#" class="dropdown-item">Talleres</a>
+															<a href="#" class="dropdown-item">Escuela de invierno</a>
+														</div>
+													</div>
 												</span>
 											</div>
 										</div>
 										<div class="">
 											<div class="autocomplete input-group" selected="">
-												<input type="text" placeholder="FORMATO" class="lookup form-control">
+												<input type="hidden" id="hfFormato" value="FORMATO" >
 												<span class="input-group-btn">
-													<button class="btn btn-default" type="button" tabindex="-1">
-														<span class="fa fa-caret-down"></span>
-													</button>
+													<div class="dropdown show">
+														<button class="btn btn-default dropdown-toggle" type="button" id="ddFormato" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															FORMATO <span class="fa fa-caret-up"></span>
+														</button>
+														<div class="dropdown-menu" aria-labelledby="ddFormato">
+															<a href="#" class="dropdown-item">Proyectos</a>
+															<a href="#" class="dropdown-item">Recepción de propuestas</a>
+															<a href="#" class="dropdown-item">Ensayo abierto</a>
+															<a href="#" class="dropdown-item">Masterclass</a>
+															<a href="#" class="dropdown-item">Laboratorio</a>
+															<a href="#" class="dropdown-item">Talleres</a>
+															<a href="#" class="dropdown-item">Escuela de invierno</a>
+														</div>
+													</div>
 												</span>
 											</div>
 										</div>
 										<div class="">
 											<div class="autocomplete input-group" selected="">
-												<input type="text" placeholder="PUBLICO" class="lookup form-control">
+												<input type="hidden" id="hfPublico" value="PUBLICO" >
 												<span class="input-group-btn">
-													<button class="btn btn-default" type="button" tabindex="-1">
-														<span class="fa fa-caret-down"></span>
-													</button>
+													<div class="dropdown show">
+														<button class="btn btn-default dropdown-toggle" type="button" id="ddPublico" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															PUBLICO <span class="fa fa-caret-up"></span>
+														</button>
+														<div class="dropdown-menu" aria-labelledby="ddPublico">
+															<a href="#" class="dropdown-item">Streaming</a>
+															<a href="#" class="dropdown-item">Profesionales</a>
+															<a href="#" class="dropdown-item">Conferencia</a>
+															<a href="#" class="dropdown-item">Online</a>
+															<a href="#" class="dropdown-item">Teatro de objetos</a>
+															<a href="#" class="dropdown-item">Teatro documental</a>
+														</div>
+													</div>
 												</span>
 											</div>
 										</div>
 										<div class="">
 											<div class="autocomplete input-group" selected="">
-												<input type="text" placeholder="TEMPORADA" class="lookup form-control">
+												<input type="hidden" id="hfTemporada" value="TEMPORADA">
 												<span class="input-group-btn">
-													<button class="btn btn-default" type="button" tabindex="-1">
-														<span class="fa fa-caret-down"></span>
-													</button>
+													<div class="dropdown show">
+														<button class="btn btn-default dropdown-toggle" type="button" id="ddTemporada" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															TEMPORADA <span class="fa fa-caret-up"></span>
+														</button>
+														<div class="dropdown-menu" aria-labelledby="ddTemporada">
+															<a href="#" class="dropdown-item">Conferencia perfomance</a>
+															<a href="#" class="dropdown-item">Instalación</a>
+															<a href="#" class="dropdown-item">Exposición</a>
+															<a href="#" class="dropdown-item">Intervención</a>
+															<a href="#" class="dropdown-item">Recital</a>
+															<a href="#" class="dropdown-item">Debate</a>
+															<a href="#" class="dropdown-item">Concierto</a>
+														</div>
+													</div>
 												</span>
 											</div>
 										</div>
 										<div class="">
 											<div class="autocomplete input-group" selected="">
-												<input type="text" placeholder="FECHA" class="lookup form-control">
+												<input type="hidden" id="hfFecha" value="FECHA">
 												<span class="input-group-btn">
-													<button class="btn btn-default" type="button" tabindex="-1">
-														<span class="fa fa-caret-down"></span>
-													</button>
+													<div class="dropdown show">
+														<button class="btn btn-default dropdown-toggle" type="button" id="ddFecha" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															FECHA <span class="fa fa-caret-up"></span>
+														</button>
+														<div class="dropdown-menu" aria-labelledby="ddFecha">
+															<a href="#" class="dropdown-item">Literatura</a>
+															<a href="#" class="dropdown-item">Actividad participativa</a>
+															<a href="#" class="dropdown-item">Congreso</a>
+															<a href="#" class="dropdown-item">Jornadas</a>
+															<a href="#" class="dropdown-item">Festival</a>
+														</div>
+													</div>
 												</span>
 											</div>
 										</div>
