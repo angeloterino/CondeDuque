@@ -86,7 +86,7 @@ html[xmlns] .slides {
 *********************************/
 .flexslider {
   margin: 0 0;
-  background: #eee;
+  background: transparent;
   position: relative;
   zoom: 1;
 }
@@ -108,7 +108,8 @@ html[xmlns] .slides {
 }
 
 .carousel li {
-  margin-right: 5px;
+  /* margin-right: 15px; */
+  /* margin-left: 15px; */
 }
 
 /* Direction Nav */
@@ -164,14 +165,14 @@ html[xmlns] .slides {
 }
 
 .flex-direction-nav a:before {
-  font-family: "flexslider-icon";
-  font-size: 40px;
+  font-family: "FontAwesome";
+  font-size: 30px;
   display: inline-block;
-  content: '\f001';
+  content: '\f0d9';
 }
 
 .flex-direction-nav a.flex-next:before {
-  content: '\f002';
+  content: '\f0da';
 }
 
 /* Pause/Play */
@@ -287,6 +288,20 @@ html[xmlns] .slides {
     right: 10px;
   }
 }
+.flexslider .flex-direction-nav li a {
+    position: relative;
+    height: 30px;
+    opacity: 1 !important;
+}
+.flexslider .flex-direction-nav li a.flex-next {
+    float: right;
+    right: 15px;
+}
+.flexslider .flex-direction-nav li a.flex-prev {
+    float: left;
+    left: 15px;
+}
+
 #lightbox {
   cursor: pointer;
   position: fixed;
