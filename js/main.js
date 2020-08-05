@@ -102,7 +102,7 @@ jQuery(document).ready(function($) {
 
      /************ DropDown-Select ***************/
      $(function(){
-        jQuery('.dropdown-menu').on('click', function(e,i){
+        jQuery('.filtro  .dropdown-menu').on('click', function(e,i){
           e.preventDefault();
           var _target = e.target;
           console.log(_target);
@@ -114,7 +114,10 @@ jQuery(document).ready(function($) {
         jQuery('.borrar-filtros').on('click', function(e,i){
           e.preventDefault();
           jQuery('.autocomplete .btn').each(function(i,e) {
-            jQuery(e).text(jQuery(e).attr('data-origin').toUpperCase());
+            jQuery(e).find('span').text(jQuery(e).attr('data-origin').toUpperCase());
+          });
+          jQuery('.autocomplete input[type=text]').each(function(i,e) {
+            jQuery(e).val('');
           });
         });
      });

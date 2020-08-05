@@ -193,10 +193,12 @@ https://templatemo.com/tm-406-flex
 						<div class="header-content">
 							<h3>PRENSA</h3>
 							<p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis fermentum mauris, at feugiat lacus sollicitudin sed. In ut rhoncus ligula. Vestibulum vestibulum lobortis ipsum ut dignissim. Aliquam in quam magna. Nunc sit amet porttitor sem. Phasellus rutrum ut enim non lacinia. Sed in imperdiet risus, sit amet tincidunt turpis. Donec at leo justo. Morbi condimentum nisi a massa pharetra vulputate. Nunc rutrum ultricies quam, eu fringilla leo tempor vitae. Integer eget purus sit amet ligula mattis malesuada et ut purus. Nulla vehicula auctor augue, sed rhoncus magna blandit vel.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras facilisis fermentum mauris, at feugiat lacus sollicitudin sed. In ut rhoncus ligula. Vestibulum vestibulum lobortis ipsum ut dignissim. Aliquam in quam magna.</p>
-							<div class="button-wrapper">
-								<a class="expand" href="#">FORMIULARIOS</a>
-								<a href="mailto:" class="mailto">lorenipsum@condeduque.es</a>
-								<a href="mailto:" class="mailto">lorenipsum@condeduque.es</a>
+							<div class="button-wrapper clearfix">
+								<a class="expand float-left" href="#">FORMIULARIOS</a>
+								<div class="col-lg-6 col-xs-12">
+									<a href="mailto:" class="mailto">lorenipsum@condeduque.es</a>
+									<a href="mailto:" class="mailto">lorenipsum@condeduque.es</a>
+								</div>
 							</div>
 						</div><!-- /.header-content -->
 					</div>
@@ -217,21 +219,25 @@ https://templatemo.com/tm-406-flex
 									<div class="heading-section buscadores clearfix">
 										<div class="">
 											<div class="col-md-7 col-sm-12 col-xs-12 fechas">
-												<div class="col-md-6 col-sm-12 col-xs-12"><label for="dpFechaInicio" class="col-md-4">FECHA
-														INICIO</label><input type="text" class="form-control form-control-sm col-md-8"
-														id="dpFechaInicio"><i class="fa fa-calendar"></i>
+												<div class="col-md-6 col-sm-12 col-xs-12">
+													<label for="dpFechaInicio" class="col-md-4">FECHA INICIO</label>
+													<div class="col-md-8 col-xs-8 float-right">
+														<input type="text" class="form-control justify-content-center" id="dpFechaInicio"><i class="fa fa-calendar"></i>
+													</div>
 												</div>
-												<div class="col-md-6 col-sm-12 col-xs-12"><label for="dpFechaInicio" class="col-md-4">FECHA FIN</label>
-													<input type="text" class="form-control justify-content-center col-md-8" id="dpFechaInicio"><i
-														class="fa fa-calendar"></i>
+												<div class="col-md-6 col-sm-12 col-xs-12">
+													<label for="dpFechaFin" class="col-md-4">FECHA FIN</label>
+													<div class="col-md-8 col-xs-8 float-right">
+														<input type="text" class="form-control justify-content-center" id="dpFechaFin"><i class="fa fa-calendar"></i>
+													</div>
 												</div>
 											</div>
 											<div class="col-md-5 col-sm-12 col-xs-12 float-right">
 												<div class="buscador">
 													<div class="content">
-														<label for="dpFechaInicio" class="col-md-3 col-xs-4">TÍTULO</label>
+														<label for="txtTitulo" class="col-md-3 col-xs-4">TÍTULO</label>
 														<input type="text"
-															class="form-control form-control-sm mr-3 w-75 d-flex justify-content-center col-md-9 col-xs-8"><i
+															class="form-control form-control-sm mr-3 w-75 d-flex justify-content-center col-md-9 col-xs-8" id="txtTitulo"><i
 															class="fa fa-search"></i></div>
 												</div><!-- /.buscador -->
 											</div><!-- /.col-md-6.col-sm-12.float-right -->
@@ -526,8 +532,37 @@ https://templatemo.com/tm-406-flex
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
         <script src="js/bootstrap.js"></script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
+		<script src="js/main.js"></script>
+		
+		<!-- DateTimePicker -->
+		<link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+		<script src="js/moment-with-locales.js"></script>
+		<script src="js/bootstrap-datetimepicker.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				//Inicialización de los DateTimePickers
+				$('#dpFechaInicio').datetimepicker({
+						icons: {
+							time: "fa fa-clock-o",
+							date: "fa fa-calendar",
+							previous: "fa fa-chevron-left",
+							next: "fa fa-chevron-right"
+						}
+						, format: 'L'
+						, locale: 'es'
+					});
+				$('#dpFechaFin').datetimepicker({
+						icons: {
+							time: "fa fa-clock-o",
+							date: "fa fa-calendar",
+							previous: "fa fa-chevron-left",
+							next: "fa fa-chevron-right"
+						}
+						, format: 'L'
+						, locale: 'es'
+					});
+			});
+		</script>
         <!-- Google Map -->
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         <script src="js/vendor/jquery.gmap3.min.js"></script>
